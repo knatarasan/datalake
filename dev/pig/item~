@@ -1,0 +1,11 @@
+
+
+CREATE TABLE `em_mara4` (
+  `MATNR` varchar(50) NOT NULL,
+  `MTART` varchar(50) DEFAULT NULL,
+  `MBRSH` varchar(50) DEFAULT NULL,
+  `MATKL` varchar(20) DEFAULT NULL,
+  `MEINS` varchar(3) DEFAULT NULL,
+  `BSTME` varchar(3) DEFAULT NULL,
+  `MAX01` varchar(50) DEFAULT NULL,
+

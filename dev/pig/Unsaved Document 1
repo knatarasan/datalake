@@ -1,0 +1,8 @@
+d_item = load '/oa2/sourcing/item2.csv' using PigStorage(',') as (item_id	:int,material_number	:chararray,material_type	:chararray,industry_sector	:chararray,material_group	:chararray,
+base_unit_of_measure	:chararray,order_unit	:chararray,material_xx1	:chararray,material_xx2	:chararray,material_xx3	:chararray,
+material_xx4	:chararray,material_xx5	:chararray,material_xx6	:chararray,material_xx7	:chararray,material_xx8	:chararray,
+material_xx9	:chararray,material_xx10	:chararray,material_xx11	:chararray,material_xx12	:chararray,
+material_xx13	:chararray,material_xx14	:chararray,material_xx15	:chararray,material_xx16	:chararray,
+material_xx17	:chararray,material_xx18	:chararray,material_xx19	:chararray,material_xx20	:chararray,
+material_xx21	:chararray,ff_from_date	:chararray,eff_to_date	:chararray)
+
