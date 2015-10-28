@@ -1,0 +1,29 @@
+##0##
+##12##You can set the MASTER environment variable when running examples to submit
+##11##"yarn-cluster" or "yarn-client" to run on YARN, and "local" to run 
+##13##locally with one thread, or "local[N]" to run locally with N threads. You 
+##14##can also use an abbreviated class name if the class is in the `examples`
+##3##package. For instance:
+##0##
+##0##
+##13##Many of the example programs print usage help if no params are given.
+##0##
+##0##
+##4##can be run using:
+##0##
+##0##
+##7##Please see the guidance on how to 
+##0##
+##0##
+##13##Spark uses the Hadoop core library to talk to HDFS and other Hadoop-supported
+##11##storage systems. Because the protocols have changed in different versions of
+##13##Hadoop, you must build Spark against the same version that your cluster runs.
+##0##
+##7##Please refer to the build documentation at
+##12##for detailed guidance on building for a particular distribution of Hadoop, including
+##10##building for particular Hive and Hive Thriftserver distributions. See also
+##12##for guidance on building a Spark application that works with a particular
+##1##distribution.
+##0##
+##0##
+##12##in the online documentation for an overview on how to configure Spark.

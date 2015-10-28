@@ -1,0 +1,43 @@
+##0##
+##14##Spark is a fast and general cluster computing system for Big Data. It provides
+##12##high-level APIs in Scala, Java, and Python, and an optimized engine that
+##11##supports general computation graphs for data analysis. It also supports a
+##12##rich set of higher-level tools including Spark SQL for SQL and structured
+##10##data processing, MLlib for machine learning, GraphX for graph processing,
+##6##and Spark Streaming for stream processing.
+##0##
+##0##
+##0##
+##0##
+##10##You can find the latest Spark documentation, including a programming
+##8##This README file only contains basic setup instructions.
+##0##
+##0##
+##8##To build Spark and its example programs, run:
+##0##
+##4##    mvn -DskipTests clean package
+##0##
+##13##(You do not need to do this if you downloaded a pre-built package.)
+##10##More detailed documentation is available from the project site, at
+##0##
+##0##
+##12##The easiest way to start using Spark is through the Scala shell:
+##0##
+##0##
+##8##Try the following command, which should return 1000:
+##0##
+##4##    scala> sc.parallelize(1 to 1000).count()
+##0##
+##0##
+##11##Alternatively, if you prefer Python, you can use the Python shell:
+##0##
+##0##    
+##10##And run the following command, which should also return 1000:
+##0##
+##2##    >>> sc.parallelize(range(1000)).count()
+##0##
+##0##
+##11##Spark also comes with several sample programs in the `examples` directory.
+##0##
+##0##
+##6##will run the Pi example locally.

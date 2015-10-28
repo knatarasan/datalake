@@ -1,0 +1,660 @@
+player,school,rank,city,sal,married
+Colby Cameron,Louisiana Tech,1,Newyork,300000,yes
+Case Keenum,Houston,2,Newyork,300000,yes
+Landry Jones,Oklahoma,3,Newyork,300000,yes
+Case Keenum,Houston,4,Newyork,300000,yes
+Sam Bradford,Oklahoma,5,Newyork,300000,yes
+Graham Harrell,Texas Tech,6,Newyork,300000,yes
+Colt Brennan,Hawaii,7,Newyork,300000,yes
+Brady Quinn,Notre Dame,8,Newyork,300000,yes
+Stefan LeFors,Louisville,9,Newyork,300000,yes
+BJ Symons,Texas Tech,10,Newyork,300000,yes
+Kliff Kingsbury,Texas Tech,11,Newyork,300000,yes
+David Carr,Fresno State,12,Newyork,300000,yes
+Chris Weinke,Florida State,13,Newyork,300000,yes
+Chad Pennington,Marshall,14,Newyork,300000,yes
+Duante Culpepper,Central Florida,15,Newyork,300000,yes
+Ryan Leaf,Washington State,16,Newyork,300000,yes
+Steve Sarkisian,Brigham Young,17,Newyork,300000,yes
+Danny Wuerffel,Florida,18,Newyork,300000,yes
+Kerry Collins,Penn State,19,Newyork,300000,yes
+Trent Dilfer,Fresno State,20,Newyork,300000,yes
+Elvis Grbac,Michigan,21,Newyork,300000,yes
+Ty Detmer,Brigham Young,22,Newyork,300000,yes
+David Klingler,Houston,23,Newyork,300000,yes
+Jeff George,Illinois,24,Newyork,300000,yes
+Steve Walsh,Miami,25,Newyork,300000,yes
+Don McPherson,Syracuse,26,Newyork,300000,yes
+Vinny Testaverde,Miami,27,Newyork,300000,yes
+Brian McClure,Bowling Green,28,Newyork,300000,yes
+Robbie Bosco,Brigham Young,29,Newyork,300000,yes
+Steve Young,Brigham Young,30,Newyork,300000,yes
+John Elway,Stanford,31,Newyork,300000,yes
+Jim McMahon,Brigham Young,32,Newyork,300000,yes
+Marc Herrmann,Purdue,33,Newyork,300000,yes
+Marc Wilson,Brigham Young,34,Newyork,300000,yes
+Steve Dils,Stanford,35,Newyork,300000,yes
+Guy Benjamin,Stanford,36,Newyork,300000,yes
+Tommy Kramer,Rice,37,Newyork,300000,yes
+Gene Swick,Toledo,38,Newyork,300000,yes
+Gary Scheide,Brigham Young,39,Newyork,300000,yes
+Jessee Freitas,San Diego State,40,Newyork,300000,yes
+Don Strock,Virginia Tech,41,Newyork,300000,yes
+John Reaves,Florida,42,Newyork,300000,yes
+Pat Sullivan,Auburn,43,Newyork,300000,yes
+Mike Phipps,Purdue,44,Newyork,300000,yes
+Chuck Hickson,Southern Methodist,45,Newyork,300000,yes
+Terry Hanratty,Notre Dame,46,Newyork,300000,yes
+Bob Greise,Purdue,47,Newyork,300000,yes
+Steve Sloan,Alabama,48,Newyork,300000,yes
+Jerry Rhome,Tulsa,49,Newyork,300000,yes
+Don Trull,Baylor,50,Newyork,300000,yes
+Don Trull,Baylor,51,Newyork,300000,yes
+Ron Miller,Wisconsin,52,Newyork,300000,yes
+Hayseed Stephens,Hardin Simmons,53,Newyork,300000,yes
+Dick Norman,Stanford,54,Newyork,300000,yes
+Manti Te'o,Notre Dame,55,Newyork,300000,yes
+Tyrann Mathieu,LSU,56,Newyork,300000,yes
+Patrick Peterson,LSU,57,Newyork,300000,yes
+Ndamukong Suh,Nebraska,58,Newyork,300000,yes
+Ray Maualuga,Southern California,59,Newyork,300000,yes
+Dan Connor,Penn State,60,Newyork,300000,yes
+Paul Posluszny,Penn State,61,Newyork,300000,yes
+Paul Posluszny,Penn State,62,Newyork,300000,yes
+David Pollack,Georgia,63,Newyork,300000,yes
+Teddy Lehman,Oklahoma,64,Newyork,300000,yes
+E.J. Henderson,Maryland,65,Newyork,300000,yes
+Julius Peppers,North Carolina,66,Newyork,300000,yes
+Dan Morgan,Miami,67,Newyork,300000,yes
+LaVar Arrington,Penn State,68,Newyork,300000,yes
+Dat Nguyen,Texas A&M,69,Newyork,300000,yes
+Charles Woodson,Michigan,70,Newyork,300000,yes
+Pat Fitzgerald,Northwestern,71,Newyork,300000,yes
+Pat Fitzgerald,Northwestern,72,Newyork,300000,yes
+Warren Sapp,Miami,73,Newyork,300000,yes
+Rob Waldrop,Arizona,74,Newyork,300000,yes
+Marqise Lee,Southern California,75,Newyork,300000,yes
+Justin Blacmon,Oklahoma State,76,Newyork,300000,yes
+Justin Blacmon,Oklahoma State,77,Newyork,300000,yes
+Golden Tate,Notre Dame,78,Dublin,300000,yes
+Michael Crabtree,Texas Tech,79,Dublin,300000,yes
+Michael Crabtree,Texas Tech,80,Dublin,300000,yes
+Calvin Johnson,Georgia Tech,81,Dublin,300000,yes
+Mike Hass,Oregon State,82,Dublin,300000,yes
+Braylon Edwards,Michigan,83,Dublin,300000,yes
+Larry Fitzgerald,Pittsburgh,84,Dublin,300000,yes
+Charles Rogers,Michigan State,85,Dublin,300000,yes
+Josh Reed,LSU,86,Dublin,300000,yes
+Antonio Bryant,Pittsburgh,87,Dublin,300000,yes
+Troy Walters,Stanford,88,Dublin,300000,yes
+Troy Edwards,Louisiana Tech,89,Dublin,300000,yes
+Randy Moss,Marshall,90,Dublin,300000,yes
+Marcus Harris,Wyoming,91,Dublin,300000,yes
+Terry Glenn,Ohio State,92,Dublin,300000,yes
+Bobby Engram,Penn State,93,Dublin,300000,yes
+Manti Te'o,Notre Dame,94,Dublin,300000,yes
+Luke Kuechly,Boston College,95,Dublin,300000,yes
+Von Miller,Texas A&M,96,Dublin,300000,yes
+Rolando McClain,Alabama,97,Dublin,300000,yes
+Aaron Curry,Wake Forest,98,Dublin,300000,yes
+James Laurinaitis,Ohio State,99,Dublin,300000,yes
+Patrick Willis,Mississippi,100,Dublin,300000,yes
+Paul Posluszny,Penn State,101,Dublin,300000,yes
+Derrick Johnson,Texas,102,Dublin,300000,yes
+Teddy Lehman,Oklahoma,103,Dublin,300000,yes
+E.J. Henderson,Maryland,104,Dublin,300000,yes
+Rocky Calmus,Oklahoma,105,Dublin,300000,yes
+Dan Morgan,Miami,106,Dublin,300000,yes
+LaVar Arrington,Penn State,107,Dublin,300000,yes
+Chris Claiborne,Southern California,108,Dublin,300000,yes
+Andy Katzenmoyer,Ohio State,109,Dublin,300000,yes
+Matt Russell,Colorado,110,Dublin,300000,yes
+Kevin Hardy,Illinois,111,Dublin,300000,yes
+Dana Howard,Illinois,112,Dublin,300000,yes
+Trev Alberts,Nebraska,113,Dublin,300000,yes
+Marvin Jones,Florida State,114,Dublin,300000,yes
+Erick Anderson,Michigan,115,Dublin,300000,yes
+Alfred William,Colorado,116,Dublin,300000,yes
+Percy Snow,Michigan State,117,Dublin,300000,yes
+Derrick Thomas,Alabama,118,Dublin,300000,yes
+Paul McGowan,Florida State,119,Dublin,300000,yes
+Brian Bosworth,Oklahoma,120,Dublin,300000,yes
+Brian Bosworth,Oklahoma,121,Dublin,300000,yes
+Manti Te'o,Notre Dame,122,Dublin,300000,yes
+Andrew Luck,Stanford,123,Dublin,300000,yes
+Cam Newton,Auburn,124,Dublin,300000,yes
+Colt McCoy,Texas,125,Dublin,300000,yes
+Colt McCoy,Texas,126,Dublin,300000,yes
+Darren McFadden,Arkansas,127,Dublin,300000,yes
+Troy Smith,Ohio State,128,Dublin,300000,yes
+Reggie Bush,Southern California,129,Dublin,300000,yes
+Matt Leinart,Southern California,130,Dublin,300000,yes
+Larry Fitzgerald,Pittsburgh,131,Dublin,300000,yes
+Larry Johnson,Penn State,132,Dublin,300000,yes
+Eric Crouch,Nebraska,133,Dublin,300000,yes
+Josh Heupel,Oklahoma,134,Dublin,300000,yes
+Ron Dayne,Wisconsin,135,Dublin,300000,yes
+Ricky Williams,Texas,136,Dublin,300000,yes
+Charles Woodson,Michigan,137,Dublin,300000,yes
+Danny Wuerfflel,Florida,138,Dublin,300000,yes
+Eddie George,Ohio State,139,Dublin,300000,yes
+Rashaan Salaam,Colorado,140,Dublin,300000,yes
+Charie Ward,Florida State,141,Dublin,300000,yes
+Gino Torretta,Miami,142,Dublin,300000,yes
+Desmond Howard,Michigan,143,Dublin,300000,yes
+Raghib Ismail,Notre Dame,144,Dublin,300000,yes
+Anthony Thompson,Indiana,145,Dublin,300000,yes
+Barry Sanders,Oklahoma State,146,Dublin,300000,yes
+Tim Brown,Notre Dame,147,Dublin,300000,yes
+Vinny Testaverde,Miami,148,Dublin,300000,yes
+Bo Jackson,Auburn,149,Dublin,300000,yes
+Doug Flutie,Boston College,150,Dublin,300000,yes
+Mike Rozier,Nebraska,151,Dublin,300000,yes
+Herschel Walker,Georgia,152,Dublin,300000,yes
+Marcus Allen,Southern California,153,Dublin,300000,yes
+Hugh Green,Pittsburgh,154,Dublin,300000,yes
+Charles White,Southern California,155,Dublin,300000,yes
+Billy Sims,Oklahoma,156,Dublin,300000,yes
+Ken MacAffe,Notre Dame,157,Dublin,300000,yes
+Tony Dorsett,Pittsburgh,158,Dublin,300000,yes
+Archie Griffin,Ohio State,159,Dublin,300000,yes
+Archie Griffin,Ohio State,160,Dublin,300000,yes
+John Cappelletti,Penn State,161,Dublin,300000,yes
+Johnny Rogers,Nebraska,162,Dublin,300000,yes
+Pat Sullivan,Auburn,163,Dublin,300000,yes
+Jim Plunkett,Stanford,164,Dublin,300000,yes
+Steve Owens,Oklahoma,165,Dublin,300000,yes
+O.J. Simpson,Southern California,166,Dublin,300000,yes
+O.J. Simpson,Southern California,167,Dublin,300000,yes
+Cairo Santos,Tulane,168,Dublin,300000,yes
+Randy Bullock,Texas A&M,169,Dublin,300000,yes
+Dan Bailey,Oklahoma State,170,Dublin,300000,yes
+Kai Forbath,UCLA,171,Dublin,300000,yes
+Graham Gano,Florida State,172,Dublin,300000,yes
+Thomas Weber,Arizona State,173,Dublin,300000,yes
+Art Carmody,Louisville,174,San Ramon,300000,yes
+Alexis Serna,Oregon State,175,San Ramon,300000,yes
+Mike Nugent,Ohio State,176,San Ramon,300000,yes
+Jonathan Nichols,Mississippi,177,San Ramon,300000,yes
+Nate Kaeding,Iowa,178,San Ramon,300000,yes
+Seth Marler,Tulane,179,San Ramon,300000,yes
+Jonathan Ruffin,Cincinnati,180,San Ramon,300000,yes
+Sebastian Janikowski,Florida State,181,San Ramon,300000,yes
+Sebastian Janikowski,Florida State,182,San Ramon,300000,yes
+Martin Gramatica,Kansas State,183,San Ramon,300000,yes
+Marc Primanti,North Carolina State,184,San Ramon,300000,yes
+Michael Reeder,Texas Christian,185,San Ramon,300000,yes
+Steve McLaughlin,Arizona,186,San Ramon,300000,yes
+Judd Davis,Florida,187,San Ramon,300000,yes
+Joe Allison,Memphis,188,San Ramon,300000,yes
+Ryan Allen,Louisiana Tech,189,San Ramon,300000,yes
+Ryan Allen,Louisiana Tech,190,San Ramon,300000,yes
+Chas Henry,Florida,191,San Ramon,300000,yes
+Drew Butler,Georgia,192,San Ramon,300000,yes
+Matt Fodge,Oklahoma State,193,San Ramon,300000,yes
+Durant Brooks,Georgia Tech,194,San Ramon,300000,yes
+Daniel Sepulveda,Baylor,195,San Ramon,300000,yes
+Ryan Plackemeier,Wake Forest,196,San Ramon,300000,yes
+Daniel Sepulveda,Baylor,197,San Ramon,300000,yes
+B.J. Sander,Ohio State,198,San Ramon,300000,yes
+Mark Mariscal,Colorado,199,San Ramon,300000,yes
+Travis Dorsch,Purdue,200,San Ramon,300000,yes
+Kevin Stemke,Wisconsin,201,San Ramon,300000,yes
+Johnny Manziel,Texas A&M,202,San Ramon,300000,yes
+Robert Griffin III,Baylor,203,San Ramon,300000,yes
+Cam Newton,Auburn,204,San Ramon,300000,yes
+Mark Ingram,Alabama,205,San Ramon,300000,yes
+Sam Bradford,Oklahoma,206,San Ramon,300000,yes
+Tim Tebow,Florida,207,San Ramon,300000,yes
+Troy Smith,Ohio State,208,San Ramon,300000,yes
+Reggie Bush,Southern California,209,San Ramon,300000,yes
+Matt Leinart,Southern California,210,San Ramon,300000,yes
+Jason White,Oklahoma,211,San Ramon,300000,yes
+Carson Palmer,Southern California,212,San Ramon,300000,yes
+Eric Crouch,Nebraska,213,San Ramon,400000,yes
+Chris Weinke,Florida State,214,San Ramon,400000,yes
+Ron Dayne,Wisconsin,215,San Ramon,400000,yes
+Ricky Williams,Texas,216,San Ramon,400000,yes
+Charles Woodson,Michigan,217,San Ramon,400000,yes
+Danny Wuerffel,Florida,218,San Ramon,400000,yes
+Eddie George,Ohio State,219,San Ramon,400000,yes
+Rashaan Salaam,Colorado,220,San Ramon,400000,yes
+Charlie Ward,Florida State,221,San Ramon,400000,yes
+Gino Torretta,Miami,222,San Ramon,400000,yes
+Desmond Howard,Michigan,223,San Ramon,400000,yes
+Ty Detmer,Brigham Young,224,San Ramon,400000,yes
+Andre Ware,Houston,225,San Ramon,400000,yes
+Barry Sanders,Oklahoma State,226,San Ramon,400000,yes
+Tim Brown,Notre Dame,227,San Ramon,400000,yes
+Vinny Testaverde,Miami,228,San Ramon,400000,yes
+Bo Jackson,Auburn,229,San Ramon,400000,yes
+Doug Flutie,Boston College,230,San Ramon,400000,yes
+Mike Rozier,Nebraska,231,San Ramon,400000,yes
+Hershel Walker,Georgia,232,San Ramon,400000,yes
+Marcus Allen,Southern California,233,San Ramon,400000,yes
+George Rogers,South Carolina,234,San Ramon,400000,yes
+Charles White,Southern California,235,San Ramon,400000,yes
+Billy Sims,Oklahoma,236,San Ramon,400000,yes
+Earl Campbell,Texas,237,San Ramon,400000,yes
+Tony Dorsett,Pittsburgh,238,San Ramon,400000,yes
+Archie Griffin,Ohio State,239,San Ramon,400000,yes
+Archie Griffin,Ohio State,240,San Ramon,400000,yes
+John Cappelletti,Penn State,241,San Ramon,400000,yes
+Johnny Rodgers,Nebraska,242,San Ramon,400000,yes
+Pat Sullivan,Auburn,243,San Ramon,400000,yes
+Jim Plunkett,Stanford,244,San Ramon,400000,yes
+Steve Owens,Oklahoma,245,San Ramon,400000,yes
+O. J. Simpson,Southern California,246,San Ramon,400000,yes
+Gary Beban,UCLA,247,San Ramon,400000,yes
+Steve Spurrier,Florida,248,San Ramon,400000,yes
+Mike Garrett,Southern California,249,San Ramon,400000,yes
+John Huarte,Notre Dame,250,San Ramon,400000,yes
+Roger Staubach,Navy,251,San Ramon,400000,yes
+Terry Baker,Oregon State,252,San Ramon,400000,yes
+Ernie Davis,Syracuse,253,San Ramon,400000,yes
+Joe Bellino,Navy,254,San Ramon,400000,yes
+Billy Cannon,LSU,255,San Ramon,400000,yes
+Pete Dawkins,Army,256,San Ramon,400000,yes
+John David Crow,Texas A&M,257,San Ramon,400000,yes
+Paul Hornung,Notre Dame,258,San Ramon,400000,yes
+Howard Cassady,Ohio State,259,San Ramon,400000,yes
+Alan Ameche,Wisconsin,260,San Ramon,400000,yes
+John Lattner,Notre Dame,261,San Ramon,400000,yes
+Billy Vessels,Oklahoma,262,San Ramon,400000,yes
+Dick Kazmaier,Princeton,263,San Ramon,400000,yes
+Vic Janowicz,Ohio State,264,San Ramon,400000,yes
+Leon Hart,Notre Dame,265,San Ramon,400000,yes
+Doak Walker,Southern Methodist,266,San Ramon,400000,yes
+John Lujack,Notre Dame,267,San Ramon,400000,yes
+Glenn Davis,Army,268,San Ramon,400000,yes
+Doc Blanchard,Army,269,San Ramon,400000,yes
+Les Horvath,Ohio State,270,San Ramon,400000,yes
+Angelo Bartelli,Notre Dame,271,San Ramon,400000,yes
+Frank Sinkwich,Georgia,272,San Ramon,400000,yes
+Bruce Smith,Minnesota,273,San Ramon,400000,yes
+Tom Harmon,Michigan,274,San Ramon,400000,yes
+Nile Kinnick,Iowa,275,San Ramon,400000,yes
+Davey O'Brien,Texas Christian,276,San Ramon,400000,yes
+Clint Frank,Yale,277,San Ramon,400000,yes
+Larry Kelley,Yale,278,San Ramon,400000,no
+Jay Berwanger,Chicago,279,San Ramon,400000,no
+Jadeveon Clowney,South Carolina,280,San Ramon,400000,no
+Whitney Mercilus,Illinois,281,San Ramon,400000,no
+Da'Quan Bowers,Clemson,282,San Ramon,400000,no
+Jerry Hughes,TCU,283,San Ramon,400000,no
+Brian Orakpo,Texas,284,San Ramon,400000,no
+Chris Long,Virginia,285,San Ramon,400000,no
+LaMarr Woodley,Michigan,286,San Ramon,400000,no
+Elvis Dumervil,Louisville,287,San Ramon,400000,no
+David Pollack,Georgia,288,San Ramon,400000,no
+David Pollack,Georgia,289,San Ramon,400000,no
+Terrell Suggs,Arizona State,290,San Ramon,400000,no
+Tavon Austin,West Virginia,291,San Ramon,400000,no
+Brandon Boykin,Georgia,292,San Ramon,400000,no
+Owen Marecic,Stanford,293,San Ramon,400000,no
+Manti Te'o,Notre Dame,294,San Ramon,400000,no
+Luke Kuechly,Boston College,295,San Ramon,400000,no
+Nick Fairley,Auburn,296,San Ramon,400000,no
+Ndamukong Suh,Nebraska,297,San Ramon,400000,no
+Brian Orakpo,Texas,298,San Ramon,400000,no
+Glenn Dorsey,LSU,299,San Ramon,400000,no
+LaMarr Woodley,Michigan,300,San Ramon,400000,no
+A.J. Hawk,Ohio State,301,San Ramon,400000,no
+David Pollack,Georgia,302,San Ramon,400000,no
+Tommie Harris,Oklahoma,303,San Ramon,500000,no
+Terrell Suggs,Arizona State,304,San Ramon,500000,no
+Julius Peppers,North Carolina,305,San Ramon,500000,no
+Jamal Reynolds,Florida State,306,San Ramon,500000,no
+Corey Moore,Virginia Tech,307,San Ramon,500000,no
+Dat Nguyen,Texas A&M,308,San Ramon,500000,no
+Grant Wistrom,Nebraska,309,San Ramon,500000,no
+Orlando Pace,Ohio State,310,San Ramon,500000,no
+Orlando Pace,Ohio State,311,San Ramon,500000,no
+Warren Sapp,Miami,312,San Ramon,500000,no
+Aaron Taylor,Notre Dame,313,San Ramon,500000,no
+Marvin Jones,Florida State,314,San Ramon,500000,no
+Steve Emtman,Washington,315,San Ramon,500000,no
+Chris Zorich,Notre Dame,316,San Ramon,500000,no
+Percy Snow,Michigan State,317,San Ramon,500000,no
+Tracy Rocker,Auburn,318,San Ramon,500000,no
+Chris Spielman,Ohio State,319,San Ramon,500000,no
+Cornelius Bennett,Alabama,320,San Ramon,500000,no
+Tony Casillas,Oklahoma,321,San Ramon,500000,no
+Tony Degrate,Texas,322,San Ramon,500000,no
+Dean Steinkuhler,Nebraska,323,San Ramon,500000,no
+Dave Rimington,Nebraska,324,San Ramon,500000,no
+Kenneth Sims,Texas,325,San Ramon,500000,no
+Hugh Green,Pittsburgh,326,San Ramon,500000,no
+Brad Budde,Southern California,327,San Ramon,500000,no
+Bruce Clark,Penn State,328,San Ramon,500000,no
+Ross Browner,Notre Dame,329,San Ramon,500000,no
+Wilson Whitley,Houston,330,San Ramon,500000,no
+Lee Roy Selmon,Oklahoma,331,San Ramon,500000,no
+Randy White,Maryland,332,San Ramon,500000,no
+John Hicks,Ohio State,333,San Ramon,500000,no
+Rich Glover,Nebraska,334,San Ramon,500000,no
+Walt Patulski,Notre Dame,335,San Ramon,500000,no
+Jim Stillwagon,Ohio State,336,San Ramon,500000,no
+Manti Te'o,Notre Dame,337,San Ramon,500000,no
+Luke Kuechly,Boston College,338,San Ramon,500000,no
+JJ Lott,Wisconsin,339,San Ramon,500000,no
+Jerry Hughes,TCU,340,San Ramon,500000,no
+James Laurinaitis,Ohio State,341,San Ramon,500000,no
+Glenn Dorsey,LSU,342,San Ramon,500000,no
+Daymeion Hughes,California,343,San Ramon,500000,no
+DeMeco Ryans,Alabama,344,San Ramon,500000,no
+David Pollack,Georgia,345,San Ramon,500000,no
+Tyler Eifert,Notre Dame,346,San Ramon,500000,no
+Dwayne Allen,Clemson,347,San Ramon,500000,no
+DJ William,Arkansas,348,San Ramon,500000,no
+Aaron Hernandez,Florida,349,San Ramon,500000,no
+Chase Coffman,Missouri,350,San Ramon,500000,no
+Fred Davis,Southern California,351,San Ramon,500000,no
+Matt Spaeth,Minnesota,352,San Ramon,500000,no
+Marcedes Lewis,UCLA,353,San Ramon,500000,no
+Heath Miller,Virginia,354,San Ramon,500000,no
+Kellen Winslow Jr.,Miami,355,San Ramon,500000,no
+Dallas Clark,Iowa,356,San Ramon,500000,no
+Daniel Graham,Colorado,357,San Ramon,500000,no
+Tim Stratton,Purdue,358,San Ramon,500000,no
+Johnny Manziel,Texas A&M,359,San Ramon,500000,no
+Robert Griffin III,Baylor,360,San Ramon,500000,no
+Cam Newton,Auburn,361,San Ramon,600000,no
+Colt McCoy,Texas,362,San Ramon,600000,no
+Tim Tebow,Florida,363,San Ramon,600000,no
+Matt Ryan,Boston College,364,San Ramon,600000,no
+JaMarcus Russell,LSU,365,San Ramon,600000,no
+Vince Young,Texas,366,San Ramon,600000,no
+Matt Leinart,Southern California,367,San Ramon,600000,no
+Manti Te'o,Notre Dame,368,San Ramon,600000,no
+Andrew Luck,Stanford,369,San Ramon,600000,no
+Cam Newton,Auburn,370,San Ramon,600000,no
+Colt McCoy,Texas,371,San Ramon,600000,no
+Tim Tebow,Florida,372,San Ramon,600000,no
+Tim Tebow,Florida,373,San Ramon,600000,no
+Brady Quinn,Notre Dame,374,San Ramon,600000,no
+Vince Young,Texas,375,San Ramon,600000,no
+Jason White,Oklahoma,376,San Ramon,600000,no
+Eli Manning,Mississippi,377,San Ramon,600000,no
+Larry Johnson,Penn State,378,San Ramon,600000,no
+Ken Dorsey,Miami,379,San Ramon,600000,no
+Drew Brees,Purdue,380,San Ramon,600000,no
+Ron Dayne,Wisconsin,381,San Ramon,600000,no
+Ricky Williams,Texas,382,San Ramon,600000,no
+Peyton Manning,Tennessee,383,San Ramon,600000,no
+Danny Wuerffel,Florida,384,San Ramon,600000,no
+Eddie George,Ohio State,385,San Ramon,600000,no
+Kerry Collins,Penn State,386,San Ramon,600000,no
+Charlie Ward,Florida State,387,San Ramon,600000,no
+Gino Torretta,Miami,388,San Ramon,600000,no
+Desmond Howard,Michigan,389,San Ramon,600000,no
+Ty Detmer,Brigham Young,390,San Ramon,600000,no
+Anthony Thompson,Indiana,391,San Ramon,600000,no
+Barry Sanders,Oklahoma State,392,San Ramon,600000,no
+Don McPherson,Syracuse,393,San Ramon,600000,no
+Vinny Testaverde,Miami,394,San Ramon,600000,no
+Chuck Long,Iowa,395,San Ramon,600000,no
+Doug Flutie,Boston College,396,San Ramon,600000,no
+Mike Rozier,Nebraska,397,San Ramon,600000,no
+Hershel Walker,Georgia,398,San Ramon,600000,no
+Marcus Allen,Southern California,399,San Ramon,600000,no
+Hugh Green,Pittsburgh,400,San Ramon,600000,no
+Charles White,Southern California,401,San Ramon,600000,no
+Chuck Fusina,Penn State,402,San Ramon,600000,no
+Ross Browner,Notre Dame,403,San Ramon,600000,no
+Tony Dorsett,Pittsburgh,404,San Ramon,600000,no
+Archie Griffin,Ohio State,405,San Ramon,600000,no
+Steve Joachim,Temple,406,San Ramon,600000,no
+John Cappelletti,Penn State,407,San Ramon,600000,no
+Brad Van Pelt,Michigan State,408,San Ramon,600000,no
+Ed Marinaro,Cornell,409,San Ramon,600000,no
+Jim Plunkett,Stanford,410,San Ramon,600000,no
+Mike Reid,Penn State,411,San Ramon,600000,no
+O. J. Simpson,Southern California,412,San Ramon,600000,no
+Gary Beban,UCLA,413,San Ramon,600000,no
+Jim Lynch,Notre Dame,414,San Ramon,600000,no
+Tommy Nobis,Texas,415,San Ramon,600000,no
+Glenn Ressler,Penn State,416,San Ramon,600000,no
+Roger Staubach,Navy,417,San Ramon,600000,no
+Terry Baker,Oregon State,418,San Ramon,600000,no
+Bob Ferguson,Ohio State,419,San Ramon,600000,no
+Joe Bellino,Navy,420,San Ramon,600000,no
+Rich Lucas,Penn State,421,San Ramon,600000,no
+Pete Dawkins,Army,422,San Ramon,600000,no
+Bob Reifsnyder,Navy,423,San Ramon,600000,no
+Tommy McDonald,Oklahoma,424,San Ramon,600000,no
+Howard Cassady,Ohio State,425,San Ramon,600000,no
+Ron Beagle,Navy,426,San Ramon,600000,no
+John Lattner,Notre Dame,427,San Ramon,600000,no
+John Lattner,Notre Dame,428,San Ramon,600000,no
+Dick Kazmaier,Princeton,429,San Ramon,600000,no
+Reds Bagnell,Pennsylvania,430,San Ramon,600000,no
+Leon Hart,Notre Dame,431,San Ramon,600000,no
+Chuck Bednarik,Pennsylvania,432,San Ramon,600000,no
+Doak Walker,Southern Methodist,433,San Ramon,600000,no
+Charley Trippi,Georgia,434,San Ramon,600000,no
+Doc Blanchard,Army,435,San Ramon,600000,no
+Glenn Davis,Army,436,San Ramon,600000,no
+Bob Odell,Pennsylvania,437,San Ramon,600000,no
+Paul Governali,Columbia,438,San Ramon,600000,no
+Bill Dudley,Virginia,439,San Ramon,600000,no
+Tom Harmon,Michigan,440,San Ramon,600000,no
+Nile Kinnick,Iowa,441,San Ramon,600000,no
+Davey O'Brien,Texas Christian,442,San Ramon,600000,no
+Clint Frank,Yale,443,San Ramon,600000,no
+Manti Te'o,Notre Dame,444,San Ramon,600000,no
+Luke Kuechly,Boston College,445,San Ramon,600000,no
+Da'Quan Bowers,Clemson,446,San Ramon,600000,no
+Ndamukong Suh,Nebraska,447,San Ramon,600000,no
+Brian Orakpo,Texas,448,San Ramon,600000,no
+Glenn Dorsey,LSU,449,San Ramon,600000,no
+James Laurinaitis,Ohio State,450,San Ramon,600000,no
+Elvis Dumervil,Louisville,451,San Ramon,600000,no
+Derrick Johnson,Texas,452,San Ramon,600000,no
+Derrick Strait,Oklahoma State,453,San Ramon,600000,no
+Terrell Suggs,Arizona State,454,San Ramon,600000,no
+Roy Williams,Oklahoma,455,San Ramon,600000,no
+Dan Morgan,Miami,456,San Ramon,400000,no
+Corey Moore,Virginia Tech,457,San Ramon,400000,no
+Champ Bailey,Georgia,458,San Ramon,400000,no
+Charles Woodson,Michigan,459,San Ramon,400000,no
+Pat Fitzgerald,Northwestern,460,San Ramon,400000,no
+Pat Fitzgerald,Northwestern,461,San Ramon,400000,no
+Warren Sapp,Miami,462,San Ramon,400000,no
+Rob Waldrop,Arizona,463,San Ramon,400000,no
+Johnny Manziel,Texas A&M,464,San Ramon,400000,no
+Robert Griffin III,Baylor,465,San Ramon,400000,no
+Cam Newton,Auburn,466,San Ramon,400000,no
+Colt McCoy,Texas,467,San Ramon,400000,no
+Sam Bradford,Oklahoma,468,San Ramon,400000,no
+Tim Tebow,Florida,469,San Ramon,400000,no
+Troy Smith,Ohio State,470,San Ramon,400000,no
+Vince Young,Texas,471,San Ramon,400000,no
+Jason White,Oklahoma,472,San Ramon,400000,no
+Jason White,Oklahoma,473,San Ramon,400000,no
+Brad Banks,Iowa,474,San Ramon,400000,no
+Eric Crouch,Nebraska,475,San Ramon,400000,no
+Chris Weinke,Florida State,476,San Ramon,400000,no
+Joe Hamilton,Georgia Tech,477,San Ramon,400000,no
+Michael Bishop,Kansas State,478,San Ramon,400000,no
+Peyton Manning,Tennessee,479,San Ramon,400000,no
+Danny Wuerffel,Florida,480,San Ramon,400000,no
+Danny Wuerffel,Florida,481,San Ramon,400000,no
+Kerry Collins,Penn State,482,San Ramon,400000,no
+Charlie Ward,Florida State,483,San Ramon,400000,no
+Gino Toretta,Miami,484,San Ramon,400000,no
+Ty Detmer,Brigham Young,485,San Ramon,400000,no
+Ty Detmer,Brigham Young,486,San Ramon,400000,no
+Andre Ware,Houston,487,San Ramon,400000,no
+Troy Aikman,UCLA,488,San Ramon,400000,no
+Don McPherson,Syracuse,489,San Ramon,400000,no
+Vinny Testaverde,Miami,490,San Ramon,400000,no
+Chuck Long,Iowa,491,San Ramon,400000,no
+Doug Flutie,Boston College,492,San Ramon,400000,no
+Steve Young,Brigham Young,493,San Ramon,400000,no
+Todd Blackledge,Penn State,494,San Ramon,400000,no
+Jim McMahon,Brigham Young,495,San Ramon,400000,no
+Mike Singletary,Baylor,496,San Ramon,400000,no
+Mike Singletary,Baylor,497,San Ramon,400000,no
+Billy Sims,Oklahoma,498,San Ramon,400000,no
+Earl Campbell,Texas,499,San Ramon,400000,no
+Luke Joeckel,Texas A&M,500,San Ramon,400000,no
+Barrett Jones,Alabama,501,San Ramon,400000,no
+Gabe Carimi,Wisconsin,502,San Ramon,400000,no
+Ndamukong Suh,Nebraska,503,San Ramon,400000,no
+Andre Smith,Alabama,504,San Ramon,400000,no
+Glenn Dorsey,LSU,505,San Ramon,400000,no
+Joe Thomas,Wisconsin,506,San Ramon,400000,no
+Greg Eslinger,Minnesota,507,San Ramon,400000,no
+Jammal Brown,Oklahoma,508,San Ramon,400000,no
+Robert Gallery,Iowa,509,San Ramon,400000,no
+Rien Long,Washington State,510,San Ramon,400000,no
+Bryant McKinnie,Miami,511,San Ramon,400000,no
+John Henderson,Tennessee,512,San Ramon,400000,no
+Chris Samuels,Alabama,513,San Ramon,400000,no
+Kris Farris,UCLA,514,San Ramon,400000,no
+Aaron Taylor,Nebraska,515,San Ramon,400000,no
+Orlando Pace,Ohio State,516,San Ramon,400000,no
+Jonathan Ogden,UCLA,517,San Ramon,400000,no
+Zach Wiegert,Nebraska,518,San Ramon,400000,no
+Rob Waldrop,Arizona,519,San Ramon,400000,no
+Will Shields,Nebraska,520,San Ramon,400000,no
+Steve Emtman,Washington,521,San Ramon,400000,no
+Russell Maryland,Miami,522,San Ramon,400000,no
+Mohammed Elewonibi,Brigham Young,523,San Ramon,400000,no
+Tracy Rocker,Auburn,524,San Ramon,400000,no
+Chad Hennings,Air Force,525,San Ramon,400000,no
+Jason Buck,Brigham Young,526,San Ramon,400000,no
+Mike Ruth,Boston College,527,San Ramon,400000,no
+Bruce Smith,Virginia Tech,528,San Ramon,400000,no
+Dean Steinkuhler,Nebraska,529,San Ramon,400000,no
+Dave Rimington,Nebraska,530,San Ramon,400000,no
+Dave Rimington,Nebraska,531,San Ramon,400000,no
+Mark May,Pittsburgh,532,San Ramon,400000,no
+Jim Ritcher,North Carolina State,533,San Ramon,400000,no
+Greg Roberts,Oklahoma,534,San Ramon,400000,no
+Brad Shearer,Texas,535,San Ramon,400000,no
+Ross Browner,Notre Dame,536,San Ramon,400000,no
+Lee Roy Selmon,Oklahoma,537,San Ramon,400000,no
+Randy White,Maryland,538,San Ramon,400000,no
+John Hicks,Ohio State,539,San Ramon,400000,no
+Rich Glover,Nebraska,540,San Ramon,400000,no
+Larry Jacobson,Nebraska,541,San Ramon,400000,no
+Jim Stillwagon,Ohio State,542,San Ramon,400000,no
+Mike Reid,Penn State,543,San Ramon,400000,no
+Bill Stanfill,Georgia,544,San Ramon,400000,no
+Ron Yary,Southern California,545,San Ramon,400000,no
+Loyd Phillips,Arkansas,546,San Ramon,400000,no
+Tommy Nobis,Texas,547,San Ramon,400000,no
+Steve DeLong,Tennessee,548,San Ramon,400000,no
+Scott Appleton,Texas,549,San Ramon,400000,no
+Bobby Bell,Minnesota,550,San Ramon,400000,no
+Merlin Olsen,Utah State,551,San Ramon,400000,no
+Tom Brown,Minnesota,552,San Ramon,400000,no
+Mike McGee,Duke,553,San Ramon,400000,no
+Zeke Smith,Auburn,554,San Ramon,400000,no
+Alex Karras,Iowa,555,San Ramon,400000,no
+Jim Parker,Ohio State,556,San Ramon,400000,no
+Calvin Jones,Iowa,557,San Ramon,400000,no
+Bill Brooks,Arkansas,558,San Ramon,400000,no
+J. D. Roberts,Oklahoma,559,San Ramon,400000,no
+Dick Modzelewski,Maryland,560,San Ramon,400000,no
+Jim Weatherall,Oklahoma,561,San Ramon,400000,no
+Bob Gain,Kentucky,562,San Ramon,400000,no
+Ed Bagdon,Michigan State,563,San Ramon,400000,no
+Bill Fischer,Notre Dame,564,San Ramon,400000,no
+Joe Steffy,Army,565,San Ramon,400000,no
+George Connor,Notre Dame,566,San Ramon,400000,no
+Barrett Jones,Alabama,567,San Ramon,400000,no
+David Molk,Michigan,568,San Ramon,400000,no
+Jake Kirkpatrick,TCU,569,San Ramon,400000,no
+Maurkice Pouncey,Florida,570,San Ramon,400000,no
+A.Q. Shipley,Penn State,571,San Ramon,400000,no
+Jonathan Luigs,Arkansas,572,San Ramon,400000,no
+Dan Mozes,West Virginia,573,San Ramon,400000,no
+Greg Eslinger,Minnesota,574,San Ramon,400000,no
+David Baas,Michigan,575,San Ramon,400000,no
+Ben Wilkerson,LSU,576,San Ramon,400000,no
+Jake Grove,Virginia Tech,577,San Ramon,400000,no
+Brett Romberg,Miami,578,San Ramon,400000,no
+LeCharles Bentley,Ohio State,579,San Ramon,400000,no
+Dominic Raiola,Nebraska,580,San Ramon,400000,no
+Tavon Austin,West Virginia,581,San Ramon,400000,no
+Joe Adams,Arkansas,582,San Ramon,400000,no
+Collin Klein,Kansas State,583,San Ramon,400000,no
+Andrew Luck,Stanford,584,San Ramon,400000,no
+Scorr Tolzien,Wisconsin,585,San Ramon,400000,no
+Colt McCoy,Texas,586,San Ramon,400000,no
+Graham Harrell,Texas Tech,587,San Ramon,400000,no
+Matt Ryan,Boston College,588,San Ramon,400000,no
+Brady Quinn,Notre Dame,589,San Ramon,400000,no
+Matt Leinart,Southern California,590,San Ramon,400000,no
+Jason White,Oklahoma,591,San Ramon,400000,no
+Eli Manning,Mississippi,592,San Ramon,400000,no
+Carson Palmer,Southern California,593,San Ramon,400000,no
+David Carr,Fresno State,594,San Ramon,400000,no
+Chris Weinke,Florida State,595,San Ramon,400000,no
+Chris Redman,Louisville,596,San Ramon,400000,no
+Cade McNown,UCLA,597,San Ramon,400000,no
+Peyton Manning,Tennessee,598,San Ramon,400000,no
+Danny Wuerffel,Florida,599,San Ramon,400000,no
+Tommie Frazier,Nebraska,600,San Ramon,400000,no
+Jay Barker,Alabama,601,San Ramon,400000,no
+Charlie Ward,Florida State,602,San Ramon,400000,no
+Gino Torretta,Miami,603,San Ramon,400000,no
+Casey Weldon,Florida State,604,San Ramon,400000,no
+Craig Erickson,Miami,605,San Ramon,400000,no
+Tony Rice,Notre Dame,606,San Ramon,400000,no
+Rodney Peete,Southern California,607,San Ramon,400000,no
+Don McPherson,Syracuse,608,San Ramon,400000,no
+Monte Ball,Wisconsin,609,San Ramon,400000,no
+Trent Richardson,Alabama,610,San Ramon,400000,no
+LaMichael Jamese,Oregon,611,San Ramon,400000,no
+Toby Gerhart,Stanford,612,San Ramon,400000,no
+Shonn Greene,Iowa,613,San Ramon,400000,no
+Darren McFadden,Arkansas,614,San Ramon,400000,no
+Darren McFadden,Arkansas,615,San Ramon,400000,no
+Reggie Bush,Southern California,616,San Ramon,400000,no
+Cedric Benson,Texas,617,San Ramon,400000,no
+Chris Perry,Michigan,618,San Ramon,400000,no
+Larry Johnson,Penn State,619,San Ramon,400000,no
+Luke Staley,Brigham Young,620,San Ramon,400000,no
+LaDainian Tomlinson,Texas Christian,621,San Ramon,400000,no
+Ron Dayne,Wisconsin,622,San Ramon,400000,no
+Ricky Williams,Texas,623,San Ramon,400000,no
+Ricky Williams,Texas,624,San Ramon,400000,no
+Byron Hanspard,Texas Tech,625,San Ramon,400000,no
+Eddie George,Ohio State,626,San Ramon,400000,no
+Rashaan Salaam,Colorado,627,San Ramon,400000,no
+Byron Morris,Texas Tech,628,San Ramon,400000,no
+Garrison Hearst,Georgia,629,San Ramon,400000,no
+Trevor Cobb,Rice,630,San Ramon,400000,no
+Greg Lewis,Washington,631,San Ramon,400000,no
+Thomas Everett,Baylor,632,San Ramon,400000,no
+Bennie Blades,Miami,633,San Ramon,400000,no
+Rickey Dixon,Oklahoma,634,San Ramon,400000,no
+Deion Sanders,Florida State,635,San Ramon,400000,no
+Mark Carrier,Southern California,636,San Ramon,400000,no
+Darryll Lewis,Arizona,637,San Ramon,400000,no
+Terrell Buckley,Florida State,638,San Ramon,400000,no
+Deon Figures,Colorado,639,San Ramon,400000,no
+Antonio Langham,Alabama,640,San Ramon,400000,no
+Chris Hudson,Colorado,641,San Ramon,400000,no
+Greg Myers,Colorado State,642,San Ramon,400000,no
+Lawrence Wright,Florida,643,San Ramon,400000,no
+Charles Woodson,Michigan,644,San Ramon,400000,no
+Antoine Winfield,Ohio State,645,San Ramon,400000,no
+Tyrone Carter,Minnesota,646,San Ramon,400000,no
+Jamar Fletcher,Wisconsin,647,San Ramon,400000,no
+Roy Williams,Oklahoma,648,San Ramon,400000,no
+Terence Newman,Kansas State,649,San Ramon,400000,no
+Derrick Strait,Oklahoma,650,San Ramon,400000,no
+Carlos Rogers,Auburn,651,San Ramon,400000,no
+Michael Huff,Texas,652,San Ramon,400000,no
+Aaron Ross,Texas,653,San Ramon,400000,no
+Antoine Cason,Arizona,654,San Ramon,400000,no
+Malcolm Jenkins,Ohio State,655,San Ramon,400000,no
+Eric Berry,Tennessee,656,San Ramon,400000,no
+Patrick Peterson,LSU,657,San Ramon,400000,no
+Morris Claiborne,LSU,658,San Ramon,400000,no
+Johnthan Banks,Mississippi State,659,San Ramon,400000,no
