@@ -1,3 +1,5 @@
+This is output when sqooped 1048576 rows for ingestion
+
 [kannappan@wn2 ingest]$ sqoop import --connect jdbc:mysql://wn1.kara/em_erp --username em_erp --password em_erp --table em_mara --target-dir /apps/dw/ingest/data/em_mara
 Warning: /usr/hdp/2.3.0.0-2557/hbase does not exist! HBase imports will fail.
 Please set $HBASE_HOME to the root of your HBase installation.
