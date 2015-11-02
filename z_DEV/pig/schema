@@ -1,5 +1,0 @@
-player:chararray,school:chararray,rank:int,city:chararray,sal:int,married:chararray
-
-PlayerAwards
-(Year:int,player:chararray,school:chararray,trophy:chararray,class:chararray,pos:chararray)
-

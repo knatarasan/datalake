@@ -25,7 +25,7 @@ SELECT MATNR,
     MAX11,    MAX12,    MAX13,    MAX14,
     MAX15,    MAX16,    MAX17,    MAX18,
     MAX19,    MAX20,    MAX21
-FROM `em_erp`.`em_mara` em_mara ;
+FROM `em_erp`.`em_mara3` ;
 
 
 #--1    Prepare dataset of for _new, (i.e, non of source_keys which are present in new available in dimension table 
@@ -92,8 +92,8 @@ SELECT em_mara_snap.MATNR,
 FROM `em_erp`.`em_mara_snap` em_mara_snap  inner join dw_sourcing.d_Item item
 on
 em_mara_snap.MATNR=item.material_number 
-and em_mara_snap.MTART<>item.material_type;
-
+and em_mara_snap.MTART<>item.material_type
+where item.eff_to_date='2999-12-31';
 
 #-- 4.1 close existing rows
 
