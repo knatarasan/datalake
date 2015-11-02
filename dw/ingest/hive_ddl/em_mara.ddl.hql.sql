@@ -34,9 +34,10 @@ LINES TERMINATED BY '\n'
 stored as TEXTFILE
 LOCATION '/apps/dw/ingest/data/em_mara';
 
+sqoop import --connect jdbc:mysql://wn1.kara/em_erp --username em_erp --password em_erp --table em_mara3 --target-dir /apps/dw/ingest/data/em_mara --split-by matnr
 
---drop table ingest.em_mara;
-CREATE TABLE ingest.em_mara (
+
+CREATE TABLE ingest.em_mara_snap (
   `MATNR` int,
   `MTART` varchar(50),
   `MBRSH` varchar(50),
@@ -69,7 +70,42 @@ clustered by (MATNR) into 10 buckets
 stored as ORC;
 
 
-insert into table ingest.em_mara select * from ingest.em_mara_stg;
+insert into table ingest.em_mara_snap select * from ingest.em_mara_stg;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 --Before Index at ingest.em_mara
