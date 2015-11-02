@@ -69,16 +69,6 @@ FROM `em_erp`.`em_mara_new`;
 #--3 	Get dimension Item rows which are existing in d_Item but there is change in columns
 --  for which history to be maintained (put them into _changed table)
 
-/* Test run stuck at the following step for longer time  
-during stuk the record count is around a million rows
-####
-select count(*) from em_erp.em_mara_snap;
-1048576
-
-select count(*) from dw_sourcing.d_Item item;
-1048577
-
-*/
 
 insert into em_erp.em_mara_changed 
 SELECT em_mara_snap.MATNR,
