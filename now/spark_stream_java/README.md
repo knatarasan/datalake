@@ -10,11 +10,12 @@
 	~/datalake/archive/spark/spark-1.5.1-bin-hadoop2.6/bin/spark-submit --class SimpleApp ./target/simple-project-1.0.jar
 
 (
-	Above is latest version of spark downloded from http://spark.apache.org/downloads.html
-	release 1.5.1
-	pkg type : pre-built for hadoop 2.6 and later
-	Direct Download
-	clic link spark-1.5.1-bin-hadoop2.6.tgz
+	--Above is latest version of spark downloded from http://spark.apache.org/downloads.html
+	--release 1.5.1
+	--pkg type : pre-built for hadoop 2.6 and later
+	--Direct Download
+	--click link spark-1.5.1-bin-hadoop2.6.tgz
+)
 
 
 This is working version ..!
