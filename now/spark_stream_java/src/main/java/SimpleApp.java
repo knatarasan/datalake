@@ -1,13 +1,19 @@
+import org.apache.spark.SparkConf;
+import org.apache.spark.api.java.JavaSparkContext;
 import org.apache.spark.api.java.*;
 import org.apache.spark.api.java.function.Function;
 
+
 public class SimpleApp{
 	public static void main(String[] args){
+		
+
+
 		String logFile="README.md";
 
-		//JavaSparkContext sc= new JavaSparkContext("local","Simple App","$SPARK_HOME",new String[]{"target/simple-project-1.0.jar"});
-		
-		JavaSparkContext sc= new JavaSparkContext("local","Simple App");
+		//JavaSparkContext sc= new JavaSparkContext("local","Simple App","/usr/hdp/2.3.0.0-2557/spark/bin/spark-submit",new String[]{"target/simple-project-1.0.jar"});
+		SparkConf conf = new SparkConf().setMaster("local").setAppName("Simple App");		
+		JavaSparkContext sc= new JavaSparkContext(conf);
 
 		JavaRDD<String> logData = sc.textFile(logFile).cache();
 
@@ -20,6 +26,7 @@ public class SimpleApp{
 		}).count();
 
 		System.out.println("Lines with a : "+numAs + ", lines with b: "+numBs);
+		System.exit(0);
 
 	}
 }

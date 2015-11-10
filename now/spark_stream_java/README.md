@@ -7,5 +7,15 @@
 3. build with 
 	mvn clean && mvn compile && mvn package
 4. Execute with 
-	/usr/hdp/2.3.0.0-2557/spark/bin/spark-submit --class SimpleApp ./target/simple-project-1.0.jar ./README.md ./abs
-	SPARK_HOME#					class created#	jar file name#			File to read
+	~/datalake/archive/spark/spark-1.5.1-bin-hadoop2.6/bin/spark-submit --class SimpleApp ./target/simple-project-1.0.jar
+
+(
+	Above is latest version of spark downloded from http://spark.apache.org/downloads.html
+	release 1.5.1
+	pkg type : pre-built for hadoop 2.6 and later
+	Direct Download
+	clic link spark-1.5.1-bin-hadoop2.6.tgz
+
+
+This is working version ..!
+
