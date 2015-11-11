@@ -16,5 +16,4 @@ If they are older versions copy from apache or use the jars available in this gi
 
 3) run 
 	$mvn install
-
-4. copy the file created into <FLUME_HOME>/lib
+ 	copy the file created into <FLUME_HOME>/lib

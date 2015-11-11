@@ -9,6 +9,8 @@ Execute with following jars
 
 java -cp ./target/simple-project-1.0.jar:./target/dependency/jackson-core-asl-1.9.13.jar:./target/dependency/jackson-mapper-asl-1.9.13.jar ParseJsonSample user.json
 
+Refered from 
+http://www.ngdata.com/parsing-a-large-json-file-efficiently-and-easily/
 
 */
 
