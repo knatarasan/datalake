@@ -3,6 +3,15 @@ import org.codehaus.jackson.*;
 
 import java.io.File;
 
+/*
+
+Execute with following jars
+
+java -cp ./target/simple-project-1.0.jar:./target/dependency/jackson-core-asl-1.9.13.jar:./target/dependency/jackson-mapper-asl-1.9.13.jar ParseJsonSample user.json
+
+
+*/
+
 public class ParseJsonSample {
   public static void main(String[] args) throws Exception {
     JsonFactory f = new MappingJsonFactory();

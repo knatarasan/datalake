@@ -26,10 +26,16 @@
 
 
 
-#Compile ParseJsonSample.java
-mvn clean dependency:copy-dependencies && mvn compile && mvn package
+#mvn 
+----
+To download dependencies
+	mvn clean dependency:copy-dependencies && mvn compile && mvn package
+Only compile and package
+	mvn compile && mvn package
 
 
+Java packages to process twitt jsons 
+https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=java%20how%20to%20parse%20twitter%20json
 
 #Installation of latest spark
 	--Above is latest version of spark downloded from http://spark.apache.org/downloads.html
