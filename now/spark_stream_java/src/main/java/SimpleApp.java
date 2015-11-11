@@ -25,6 +25,7 @@ public class SimpleApp{
 		}).count();
 
 		System.out.println("Lines with a : "+numAs + ", lines with b: "+numBs);
+
 		System.exit(0);
 
 	}

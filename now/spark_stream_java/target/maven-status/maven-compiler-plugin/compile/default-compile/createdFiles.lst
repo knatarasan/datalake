@@ -1,5 +1,6 @@
 ReadJson$Person.class
 ReadJson$WriteJson.class
+StreamingLogInput$1.class
 ParseJsonSample.class
 WordCount.class
 SimpleApp$2.class
@@ -15,5 +16,6 @@ User.class
 WordCount$3.class
 Algorithms.class
 SimpleApp$1.class
+StreamingLogInput.class
 WordCount$2.class
 User$Gender.class
