@@ -19,9 +19,15 @@
 	*works*
 
 	yarn
-	~/datalake/archive/spark/spark-1.5.1-bin-hadoop2.6/bin/spark-submit --class WordCount ./target/simple-project-1.0.jar /datalake/now/spark_stream_java/tweets.json --master yarn 
+	~/datalake/archive/spark/spark-1.5.1-bin-hadoop2.6/bin/spark-submit --class WordCount ./target/simple-project-1.0.jar /datalake/now/spark_stream_java/tweets.json --master yarn
 	*works*
 	
+~/datalake/archive/spark/spark-1.5.1-bin-hadoop2.6/bin/spark-submit --class WordCount ./target/simple-project-1.0.jar local file:///home/kannappan/datalake/now/spark_stream_java/tweets.json file:///home/kannappan/datalake/now/spark_stream_java/tweets_out --master local
+
+
+
+#Compile ParseJsonSample.java
+mvn clean dependency:copy-dependencies && mvn compile && mvn package
 
 
 
