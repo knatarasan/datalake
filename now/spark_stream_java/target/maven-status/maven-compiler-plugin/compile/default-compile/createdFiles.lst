@@ -5,6 +5,7 @@ ParseJsonSample.class
 WordCount.class
 SimpleApp$2.class
 WordCount$1.class
+KafkaInput.class
 ReadJson.class
 ReadJson$ParseJson.class
 ReadJson$LikesPandas.class

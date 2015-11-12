@@ -22,7 +22,15 @@
 	~/datalake/archive/spark/spark-1.5.1-bin-hadoop2.6/bin/spark-submit --class WordCount ./target/simple-project-1.0.jar /datalake/now/spark_stream_java/tweets.json --master yarn
 	*works*
 	
-~/datalake/archive/spark/spark-1.5.1-bin-hadoop2.6/bin/spark-submit --class WordCount ./target/simple-project-1.0.jar local file:///home/kannappan/datalake/now/spark_stream_java/tweets.json file:///home/kannappan/datalake/now/spark_stream_java/tweets_out --master local
+	~/datalake/archive/spark/spark-1.5.1-bin-hadoop2.6/bin/spark-submit --class WordCount ./target/simple-project-1.0.jar local file:///home/kannappan/datalake/now/spark_stream_java/tweets.json file:///home/kannappan/datalake/now/spark_stream_java/tweets_out --master local
+
+
+Stream test local
+StreamingLogInput
+	start another $nc -lk 7777
+
+	~/datalake/archive/spark/spark-1.5.1-bin-hadoop2.6/bin/spark-submit --class StreamingLogInput ./target/simple-project-1.0.jar local
+	*works*
 
 
 
