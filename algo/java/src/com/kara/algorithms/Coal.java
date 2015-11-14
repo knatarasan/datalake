@@ -1,6 +1,18 @@
 /*
- *  * Decompiled with CFR 0_102.
- *   */
+
+--This class contains my own implementation of traverse sort and pebble sort
+--I ran performance tests using ArrayList and loaded 1 million to 10 million  Strings 
+	and observed memory consumption and CPU consumption.
+--output found traversort is faster than pebble (may be my way of implemenation is not efficient one)
+--When Started running the experiment ram consumption was at 2.8 GB when completed variou test
+	ram consumption was 4.7 GB after , I've closed the terminal it came down to 2.8 GB.
+
+
+usage bin>java com.kara.algorithms.Coal 100   --This will create 100K Strings and follow sort
+
+*/
+
+
 package com.kara.algorithms;
 
 import java.io.PrintStream;
