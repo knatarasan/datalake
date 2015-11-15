@@ -1,3 +1,5 @@
+package com.kara.algorithms;
+
 /*
 
 --This class contains my own implementation of traverse sort and pebble sort
@@ -13,8 +15,6 @@ usage bin>java com.kara.algorithms.Coal 100   --This will create 100K Strings an
 */
 
 
-package com.kara.algorithms;
-
 import java.io.PrintStream;
 import java.math.BigInteger;
 import java.security.SecureRandom;
@@ -23,19 +23,22 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Random;
+import java.util.Collections;
 
 public class Coal {
     static ArrayList<String> elm5 = new ArrayList();
     static String[] forTraverseArray;
     static String[] forPebbleArray;
+    static String[] forCollectionsArray;
 
     public static void main(String[] args) {
-        int arrListSize = Integer.parseInt(args[0]);
-        System.out.println("Size of array passed is " + arrListSize);
+        int arrListSize = 50;//Integer.parseInt(args[0]);
+        System.out.println("Size of array passed is " + arrListSize*1000);
         Coal c = new Coal();
         c.loadArray(arrListSize);
         c.traverseSort(elm5);
-        c.pebbleSort(elm5);
+        c.collectionsSort(elm5);
+        //c.pebbleSort(elm5);
         c.printArraySize(elm5);
     }
 
@@ -64,6 +67,18 @@ public class Coal {
         System.out.println("traverseSort : end  " + sdf.format(cal2.getTime()));
     }
 
+    void collectionsSort(ArrayList ar){
+    	
+    	printTimeNow("Collections sort start");
+        forCollectionsArray = new String[ar.size()];
+    	Collections.sort(ar);
+    	
+    	for (int i = 0; i < forCollectionsArray.length; ++i) {
+            forCollectionsArray[i] = (String)ar.get(i);
+        }
+    	printTimeNow("Collections sort end");
+    }
+    		
     public void pebbleSort(ArrayList ar) {
         int i;
         SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
@@ -111,4 +126,12 @@ public class Coal {
             elm5.add(bi.toString());
         }
     }
+    
+    void printTimeNow(String st){
+        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+        Calendar cal1 = Calendar.getInstance();
+        System.out.println(st +"   "+ sdf.format(cal1.getTime()));
+    }
+
+    
 }
