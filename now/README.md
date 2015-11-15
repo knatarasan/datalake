@@ -28,7 +28,7 @@ now
 
 	3. Following step will start flume agent with conf file flum2.conf, <- run this at wn2.kara
 	
-		/usr/hdp/2.3.0.0-2557/flume/bin/flume-ng agent --conf ./conf/ -f flume2.conf -Dflume.root.logger=DEBUG,console -n TwitterAgent
+		/usr/hdp/2.3.0.0-2557/flume/bin/flume-ng agent --conf ./conf/ -f /home/kannappan/datalake/now/twitter_2_flume/flume2.conf -Dflume.root.logger=DEBUG,console -n TwitterAgent
 	
 
 	
@@ -40,5 +40,11 @@ now
 	5. Test success 
 
 --spark stream
+	6. Run inbuilt example for JavaKafkaWordCount
+		~/datalake/archive/spark/spark-1.5.1-bin-hadoop2.6/bin/run-example org.apache.spark.examples.streaming.JavaKafkaWordCount wn1.kara:2181 now_Consumers twitter-topic 1
+	7. Following configuration works fine
+		i) spark version 1.4.1
+		ii) ~/datalake/archive/spark/spark-1.4.1-bin-hadoop2.6/bin/spark-submit --master local[*] --class JavaKafkaWordCount target/simple-project-1.0-jar-with-dependencies.jar wn1.kara:2181 now_Consumers twitter-topic 1
+		iii) pom.xml timestamp 14NOV 7.58 pm
+		
 
-	

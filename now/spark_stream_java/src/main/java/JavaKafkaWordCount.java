@@ -32,7 +32,22 @@ import org.apache.spark.streaming.kafka.KafkaUtils;
  *   `$ bin/run-example org.apache.spark.examples.streaming.JavaKafkaWordCount zoo01,zoo02, \
  *    zoo03 my-consumer-group topic1,topic2 1`
 
+------1.5.1.
+
+~/datalake/archive/spark/spark-1.5.1-bin-hadoop2.6/bin/spark-submit --master local[*] --class JavaKafkaWordCount target/simple-project-1.0.jar wn1.kara:2181 now_Consumers twitter-topic 1
+
 ~/datalake/archive/spark/spark-1.5.1-bin-hadoop2.6/bin/spark-submit --master local[*] --class JavaKafkaWordCount target/simple-project-1.0-jar-with-dependencies.jar wn1.kara:2181 now_Consumers twitter-topic 1
+
+~/datalake/archive/spark/spark-1.5.1-bin-hadoop2.6/bin/spark-submit --master local[*] --class JavaKafkaWordCount target/original-simple-project-1.0.jar wn1.kara:2181 now_Consumers twitter-topic 1
+
+
+-------1.4.1
+
+~/datalake/archive/spark/spark-1.4.1-bin-hadoop2.6/bin/spark-submit --master local[*] --class JavaKafkaWordCount target/simple-project-1.0-jar-with-dependencies.jar wn1.kara:2181 now_Consumers twitter-topic 1
+*works*
+
+
+-----------1.4.1
 
 ~/datalake/archive/spark/spark-1.5.1-bin-hadoop2.6/bin/run-example org.apache.spark.examples.streaming.JavaKafkaWordCount wn1.kara:2181 now_Consumers twitter-topic 1
 
