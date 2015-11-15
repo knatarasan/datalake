@@ -32,7 +32,13 @@ import org.apache.spark.streaming.kafka.KafkaUtils;
  *   `$ bin/run-example org.apache.spark.examples.streaming.JavaKafkaWordCount zoo01,zoo02, \
  *    zoo03 my-consumer-group topic1,topic2 1`
 
-~/datalake/archive/spark/spark-1.5.1-bin-hadoop2.6/bin/spark-submit --class JavaKafkaWordCount ./target/simple-project-1.0.jar:./target/dependency/spark-streaming-kafka_2.11-1.5.1.jar wn1.kara:2181 now_Consumers twitter-topic 1 --master local
+~/datalake/archive/spark/spark-1.5.1-bin-hadoop2.6/bin/spark-submit --master local[*] --class JavaKafkaWordCount target/simple-project-1.0-jar-with-dependencies.jar wn1.kara:2181 now_Consumers twitter-topic 1
+
+~/datalake/archive/spark/spark-1.5.1-bin-hadoop2.6/bin/run-example org.apache.spark.examples.streaming.JavaKafkaWordCount wn1.kara:2181 now_Consumers twitter-topic 1
+
+/home/kannappan/datalake/archive/spark/spark-1.5.1-bin-hadoop2.6/bin/spark-submit --master local[*] --class org.apache.spark.examples.streaming.JavaKafkaWordCount /home/kannappan/datalake/archive/spark/spark-1.5.1-bin-hadoop2.6/lib/spark-examples-1.5.1-hadoop2.6.0.jar wn1.kara:2181 now_Consumers twitter-topic 1
+
+/home/kannappan/datalake/archive/spark/spark-1.5.1-bin-hadoop2.6/bin/spark-submit --master local[*] --class org.apache.spark.examples.streaming.JavaKafkaWordCount /home/kannappan/datalake/archive/spark/spark-1.5.1-bin-hadoop2.6/lib/spark-examples-1.5.1-hadoop2.6.0.jar wn1.kara:2181 now_Consumers twitter-topic 1
 
 ~/datalake/archive/spark/spark-1.5.1-bin-hadoop2.6/bin/run-example org.apache.spark.examples.streaming.JavaKafkaWordCount wn1.kara:2181 now_Consumers twitter-topic 1
 
