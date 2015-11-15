@@ -47,4 +47,11 @@ now
 		ii) ~/datalake/archive/spark/spark-1.4.1-bin-hadoop2.6/bin/spark-submit --master local[*] --class JavaKafkaWordCount target/simple-project-1.0-jar-with-dependencies.jar wn1.kara:2181 now_Consumers twitter-topic 1
 		iii) pom.xml timestamp 14NOV 7.58 pm
 		
+	8. Submit above job on yarn
+
+		$export HADOOP_CONF_DIR=/usr/hdp/2.3.0.0-2557/hadoop-yarn/etc/hadoop
+		~/datalake/archive/spark/spark-1.4.1-bin-hadoop2.6/bin/spark-submit --master yarn --class JavaKafkaWordCount target/simple-project-1.0-jar-with-dependencies.jar wn1.kara:2181 now_Consumers twitter-topic 1
+*fail*
+		/usr/hdp/2.3.0.0-2557/spark/bin/spark-submit --master yarn --class JavaKafkaWordCount target/simple-project-1.0-jar-with-dependencies.jar wn1.kara:2181 now_Consumers twitter-topic 1
+*works*  Because current version installed  is spark 1.3.1
 
