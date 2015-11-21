@@ -1,0 +1,18 @@
+
+
+create table weather_partitioned(
+station_name STRING,
+DayOfMonth int, 
+precipitation int, 
+temperature_max int, 
+temperature_min int
+)PARTITIONED BY (Year int,Month int)
+STORED AS ORC;
+
+from sfo_weather sf
+insert into table weather_partitioned partition(Year=2008,Month=1)
+select 
+sf.station_name,sf.DayOfMonth, sf.precipitation , sf.temperature_max, sf.temperature_min
+where sf.Year=2008 and sf.month=1;
+31
+

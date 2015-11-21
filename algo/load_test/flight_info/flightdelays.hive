@@ -1,0 +1,10 @@
+select  avg(arrdelay)  from  flightdelays where dest='DEN' group by dest;
+7.264646464646464
+
+select  avg(arrdelay)  from  flightdelays where origin='LAX' and dest='SFO';
+62.5
+
+select dest, avg(arrdelay) av_delay from flightdelays group by dest order by av_delay ASC;
+
+SFO	54.97596153846154
+

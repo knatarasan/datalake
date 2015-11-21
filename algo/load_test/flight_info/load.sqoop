@@ -1,0 +1,3 @@
+sqoop export --connect jdbc:mysql://wn1.kara/em_erp --username em_erp --password em_erp --table weather --fields-terminated-by ',' --export-dir /user/horton/weather
+
+336

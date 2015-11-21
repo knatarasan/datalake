@@ -1,0 +1,79 @@
+
+create external table flightdelays(
+Year INT,
+Month INT,
+DayOfMonth INT,
+DepTime INT,
+UniqueCarrier STRING,
+FlightNum INT,
+ArrDelay INT,
+Origin STRING,
+Dest STRING
+)ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n'
+LOCATION '/user/horton/flightdelays_clean'
+;
+
+
+create table flights_weather
+as
+select
+fd.*,sf.temperature_max,sf.temperature_min 
+from 
+flightdelays fd inner join sfo_weather sf
+on fd.year=sf.year and
+fd.month=sf.month and
+fd.dayofmonth=sf.dayofmonth
+where fd.dest='SFO' or fd.origin='SFO';
+
+
+create table sfo_weather2_stg(
+station_name STRING, 
+Year INT, 
+Month INT, 
+DayOfMonth INT, 
+precipitation INT, 
+temperature_max INT, 
+temperature_min INT
+)ROW FORMAT DELIMITED 
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n'
+STORED AS TEXTFILE;
+
+LOAD DATA LOCAL INPATH '/home/kannappan/my_desk/Sample_questions_pack 5/sfo_weather.csv' INTO TABLE sfo_weather2_stg;
+
+
+create table weather_partitioned(
+station_name STRING,
+DayOfMonth INT, 
+precipitation INT, 
+temperature_max INT, 
+temperature_min INT
+)PARTITIONED BY (Year INT,Month INT)
+STORED AS ORC;
+
+
+from sfo_weather2 sf
+insert into table weather_partitioned partition(year=2008,month=1)
+select sf.station_name,sf.DayOfMonth,sf.precipitation, sf.temperature_max,sf.temperature_min
+where sf.year=2008 and sf.month=1;
+
+
+
+
+insert overwrite table weather_partitioned partition(year,month)
+select sf.station_name, sf.DayOfMonth,sf.precipitation, sf.temperature_max,sf.temperature_min,sf.year,sf.month from sfo_weather2 sf; 
+
+
+create table sfo_weather7(
+station_name STRING, 
+Year INT, 
+Month INT, 
+DayOfMonth INT, 
+precipitation INT, 
+temperature_max INT, 
+temperature_min INT
+)clustered by (year) into 4 buckets
+STORED AS ORC TBLPROPERTIES('transactional'='true');
+

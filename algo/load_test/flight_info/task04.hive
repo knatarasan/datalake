@@ -1,0 +1,74 @@
+
+create external table flightdelays(
+Year INT, 
+Month INT, 
+DayOfMonth INT, 
+DepTime INT, 
+UniqueCarrier STRING, 
+FlightNum INT, 
+ArrDelay INT, 
+Origin STRING,
+Dest STRING
+)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n'
+LOCATION '/user/horton/flightdelays_clean';
+
+
+create table sfo_weather_text(
+station_name STRING,
+Year int, 
+Month int, 
+DayOfMonth int, 
+precipitation int, 
+temperature_max int, 
+temperature_min int
+)ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n'
+STORED AS TEXTFILE;
+
+
+create table sfo_weather(
+station_name STRING,
+Year int, 
+Month int, 
+DayOfMonth int, 
+precipitation int, 
+temperature_max int, 
+temperature_min int
+)STORED AS ORC;
+
+
+set hive.execution.engine=tez;
+
+create table flights_weather stored as textfile
+as
+select
+fd.*, sf.temperature_max,sf.temperature_min from
+flightdelays fd inner join sfo_weather sf
+on
+fd.year=sf.year and
+fd.month=sf.month and
+fd.dayofmonth = sf.dayofmonth
+where fd.dest='SFO' or fd.origin='SFO';
+
+416
+
+
+
+
+
+create table sfo_weather_text(
+station_name STRING, 
+Year INT, 
+Month INT, 
+DayOfMonth INT, 
+precipitation INT, 
+temperature_max INT, 
+temperature_min INT
+)ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n'
+STORED AS TEXTFILE;
