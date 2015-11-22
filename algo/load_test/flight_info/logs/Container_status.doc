@@ -1,0 +1,46 @@
+﻿Total Outstanding Resource Requests: <memory:7680, vCores:15>
+
+Priority
+ResourceName
+Capability
+NumContainers
+RelaxLocality
+NodeLabelExpression
+20
+/default-rack
+<memory:512, vCores:1>
+15
+true
+
+20
+wn1.kara
+<memory:512, vCores:1>
+11
+true
+
+20
+wn4.kara
+<memory:512, vCores:1>
+11
+true
+
+20
+*
+<memory:512, vCores:1>
+15
+true
+
+20
+wn2.kara
+<memory:512, vCores:1>
+15
+true
+
+20
+wn3.kara
+<memory:512, vCores:1>
+8
+true
+
+
+

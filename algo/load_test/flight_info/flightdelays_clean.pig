@@ -10,3 +10,7 @@ fd_fil = filter fd by DepTime !='NA';
 fd_final = foreach fd_fil generate Year, Month, DayofMonth, DepTime, UniqueCarrier, FlightNum, ArrDelay, Origin , Dest;
 
 store fd_final into '/datalake/algo/load_test/flight_info/data/flightdelays_clean' using PigStorage(',');
+
+
+
+
