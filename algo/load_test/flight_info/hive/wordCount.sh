@@ -1,0 +1,1 @@
+hadoop jar /usr/hdp/2.3.0.0-2557/hadoop-mapreduce/hadoop-mapreduce-examples-2.7.1.2.3.0.0-2557.jar wordcount /datalake/algo/load_test/flight_info/data/word/word.txt /datalake/algo/load_test/flight_info/data/word/out
