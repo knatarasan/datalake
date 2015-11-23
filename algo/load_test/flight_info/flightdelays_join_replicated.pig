@@ -32,14 +32,14 @@ fd = load '/datalake/algo/load_test/flight_info/data/flightdelays_clean/' using 
 
 weather = load '/datalake/algo/load_test/flight_info/data/weather' using PigStorage(',') as (Year:int,Month:int,DayofMonth:int,PRCP:int,TMAX:int,TMIN:int);
 
-fd_weather = join fd by (Year,Month,DayofMonth),  weather by (Year,Month,DayofMonth) ;
+fd_weather = join fd by (Year,Month,DayofMonth),  weather by (Year,Month,DayofMonth) using 'replicated';
 
 
 --fd_weather: {fd::Year,fd::Month,fd::DayofMonth,fd::DepTime,fd::UniqueCarrier: chararray,fd::FlightNum,fd::ArrDelay,fd::Origin: chararray,fd::Dest: chararray,weather::Year,weather::Month,weather::DayofMonth,weather::PRCP,weather::TMAX,weather::TMIN}
 
 fd_weather_final = foreach fd_weather generate fd::Year,fd::Month,fd::DayofMonth,fd::DepTime,fd::UniqueCarrier,fd::FlightNum,fd::ArrDelay,fd::Origin,fd::Dest,weather::PRCP,weather::TMAX,weather::TMIN;
 
-store fd_weather_final into '/datalake/algo/load_test/flight_info/data/fd_weather_final' using PigStorage(',');
+store fd_weather_final into '/datalake/algo/load_test/flight_info/data/fd_weather_final_replicated' using PigStorage(',');
 
 
 

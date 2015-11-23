@@ -1,0 +1,90 @@
+Backend error message
+---------------------
+Container [pid=6896,containerID=container_e48_1448214558608_0016_01_000008] is running beyond physical memory limits. Current usage: 520.5 MB of 512 MB physical memory used; 2.2 GB of 1.0 GB virtual memory used. Killing container.
+Dump of the process-tree for container_e48_1448214558608_0016_01_000008 :
+	|- PID PPID PGRPID SESSID CMD_NAME USER_MODE_TIME(MILLIS) SYSTEM_TIME(MILLIS) VMEM_USAGE(BYTES) RSSMEM_USAGE(PAGES) FULL_CMD_LINE
+	|- 6896 6890 6896 6896 (bash) 0 0 115843072 359 /bin/bash -c /usr/jdk64/jdk1.8.0_40/bin/java -server -XX:NewRatio=8 -Djava.net.preferIPv4Stack=true -Dhdp.version=2.3.0.0-2557 -Xmx409m -Djava.io.tmpdir=/hadoop/yarn/local/usercache/kannappan/appcache/application_1448214558608_0016/container_e48_1448214558608_0016_01_000008/tmp -Dlog4j.configuration=container-log4j.properties -Dyarn.app.container.log.dir=/hadoop/yarn/log/application_1448214558608_0016/container_e48_1448214558608_0016_01_000008 -Dyarn.app.container.log.filesize=0 -Dhadoop.root.logger=INFO,CLA -Dhadoop.root.logfile=syslog org.apache.hadoop.mapred.YarnChild 192.168.1.69 51857 attempt_1448214558608_0016_m_000002_0 52776558133256 1>/hadoop/yarn/log/application_1448214558608_0016/container_e48_1448214558608_0016_01_000008/stdout 2>/hadoop/yarn/log/application_1448214558608_0016/container_e48_1448214558608_0016_01_000008/stderr  
+	|- 7017 6896 6896 6896 (java) 4301 83 2233176064 132895 /usr/jdk64/jdk1.8.0_40/bin/java -server -XX:NewRatio=8 -Djava.net.preferIPv4Stack=true -Dhdp.version=2.3.0.0-2557 -Xmx409m -Djava.io.tmpdir=/hadoop/yarn/local/usercache/kannappan/appcache/application_1448214558608_0016/container_e48_1448214558608_0016_01_000008/tmp -Dlog4j.configuration=container-log4j.properties -Dyarn.app.container.log.dir=/hadoop/yarn/log/application_1448214558608_0016/container_e48_1448214558608_0016_01_000008 -Dyarn.app.container.log.filesize=0 -Dhadoop.root.logger=INFO,CLA -Dhadoop.root.logfile=syslog org.apache.hadoop.mapred.YarnChild 192.168.1.69 51857 attempt_1448214558608_0016_m_000002_0 52776558133256 
+
+Container killed on request. Exit code is 143
+Container exited with a non-zero exit code 143
+
+Backend error message
+---------------------
+Task KILL is received. Killing attempt!
+
+Backend error message
+---------------------
+Container [pid=24824,containerID=container_e48_1448214558608_0016_01_000021] is running beyond physical memory limits. Current usage: 523.1 MB of 512 MB physical memory used; 2.2 GB of 1.0 GB virtual memory used. Killing container.
+Dump of the process-tree for container_e48_1448214558608_0016_01_000021 :
+	|- PID PPID PGRPID SESSID CMD_NAME USER_MODE_TIME(MILLIS) SYSTEM_TIME(MILLIS) VMEM_USAGE(BYTES) RSSMEM_USAGE(PAGES) FULL_CMD_LINE
+	|- 24824 24819 24824 24824 (bash) 1 0 115843072 358 /bin/bash -c /usr/jdk64/jdk1.8.0_40/bin/java -server -XX:NewRatio=8 -Djava.net.preferIPv4Stack=true -Dhdp.version=2.3.0.0-2557 -Xmx409m -Djava.io.tmpdir=/hadoop/yarn/local/usercache/kannappan/appcache/application_1448214558608_0016/container_e48_1448214558608_0016_01_000021/tmp -Dlog4j.configuration=container-log4j.properties -Dyarn.app.container.log.dir=/hadoop/yarn/log/application_1448214558608_0016/container_e48_1448214558608_0016_01_000021 -Dyarn.app.container.log.filesize=0 -Dhadoop.root.logger=INFO,CLA -Dhadoop.root.logfile=syslog org.apache.hadoop.mapred.YarnChild 192.168.1.69 51857 attempt_1448214558608_0016_m_000002_1 52776558133269 1>/hadoop/yarn/log/application_1448214558608_0016/container_e48_1448214558608_0016_01_000021/stdout 2>/hadoop/yarn/log/application_1448214558608_0016/container_e48_1448214558608_0016_01_000021/stderr  
+	|- 24842 24824 24824 24824 (java) 5428 133 2233864192 133544 /usr/jdk64/jdk1.8.0_40/bin/java -server -XX:NewRatio=8 -Djava.net.preferIPv4Stack=true -Dhdp.version=2.3.0.0-2557 -Xmx409m -Djava.io.tmpdir=/hadoop/yarn/local/usercache/kannappan/appcache/application_1448214558608_0016/container_e48_1448214558608_0016_01_000021/tmp -Dlog4j.configuration=container-log4j.properties -Dyarn.app.container.log.dir=/hadoop/yarn/log/application_1448214558608_0016/container_e48_1448214558608_0016_01_000021 -Dyarn.app.container.log.filesize=0 -Dhadoop.root.logger=INFO,CLA -Dhadoop.root.logfile=syslog org.apache.hadoop.mapred.YarnChild 192.168.1.69 51857 attempt_1448214558608_0016_m_000002_1 52776558133269 
+
+Container killed on request. Exit code is 143
+Container exited with a non-zero exit code 143
+
+Backend error message
+---------------------
+Container [pid=9653,containerID=container_e48_1448214558608_0016_01_000040] is running beyond physical memory limits. Current usage: 522.6 MB of 512 MB physical memory used; 2.2 GB of 1.0 GB virtual memory used. Killing container.
+Dump of the process-tree for container_e48_1448214558608_0016_01_000040 :
+	|- PID PPID PGRPID SESSID CMD_NAME USER_MODE_TIME(MILLIS) SYSTEM_TIME(MILLIS) VMEM_USAGE(BYTES) RSSMEM_USAGE(PAGES) FULL_CMD_LINE
+	|- 9653 9651 9653 9653 (bash) 0 0 115843072 359 /bin/bash -c /usr/jdk64/jdk1.8.0_40/bin/java -server -XX:NewRatio=8 -Djava.net.preferIPv4Stack=true -Dhdp.version=2.3.0.0-2557 -Xmx409m -Djava.io.tmpdir=/hadoop/yarn/local/usercache/kannappan/appcache/application_1448214558608_0016/container_e48_1448214558608_0016_01_000040/tmp -Dlog4j.configuration=container-log4j.properties -Dyarn.app.container.log.dir=/hadoop/yarn/log/application_1448214558608_0016/container_e48_1448214558608_0016_01_000040 -Dyarn.app.container.log.filesize=0 -Dhadoop.root.logger=INFO,CLA -Dhadoop.root.logfile=syslog org.apache.hadoop.mapred.YarnChild 192.168.1.69 51857 attempt_1448214558608_0016_m_000002_2 52776558133288 1>/hadoop/yarn/log/application_1448214558608_0016/container_e48_1448214558608_0016_01_000040/stdout 2>/hadoop/yarn/log/application_1448214558608_0016/container_e48_1448214558608_0016_01_000040/stderr  
+	|- 9667 9653 9653 9653 (java) 5320 82 2237865984 133436 /usr/jdk64/jdk1.8.0_40/bin/java -server -XX:NewRatio=8 -Djava.net.preferIPv4Stack=true -Dhdp.version=2.3.0.0-2557 -Xmx409m -Djava.io.tmpdir=/hadoop/yarn/local/usercache/kannappan/appcache/application_1448214558608_0016/container_e48_1448214558608_0016_01_000040/tmp -Dlog4j.configuration=container-log4j.properties -Dyarn.app.container.log.dir=/hadoop/yarn/log/application_1448214558608_0016/container_e48_1448214558608_0016_01_000040 -Dyarn.app.container.log.filesize=0 -Dhadoop.root.logger=INFO,CLA -Dhadoop.root.logfile=syslog org.apache.hadoop.mapred.YarnChild 192.168.1.69 51857 attempt_1448214558608_0016_m_000002_2 52776558133288 
+
+Container killed on request. Exit code is 143
+Container exited with a non-zero exit code 143
+
+Pig Stack Trace
+---------------
+ERROR 2997: Unable to recreate exception from backed error: Container [pid=9653,containerID=container_e48_1448214558608_0016_01_000040] is running beyond physical memory limits. Current usage: 522.6 MB of 512 MB physical memory used; 2.2 GB of 1.0 GB virtual memory used. Killing container.
+Dump of the process-tree for container_e48_1448214558608_0016_01_000040 :
+	|- PID PPID PGRPID SESSID CMD_NAME USER_MODE_TIME(MILLIS) SYSTEM_TIME(MILLIS) VMEM_USAGE(BYTES) RSSMEM_USAGE(PAGES) FULL_CMD_LINE
+	|- 9653 9651 9653 9653 (bash) 0 0 115843072 359 /bin/bash -c /usr/jdk64/jdk1.8.0_40/bin/java -server -XX:NewRatio=8 -Djava.net.preferIPv4Stack=true -Dhdp.version=2.3.0.0-2557 -Xmx409m -Djava.io.tmpdir=/hadoop/yarn/local/usercache/kannappan/appcache/application_1448214558608_0016/container_e48_1448214558608_0016_01_000040/tmp -Dlog4j.configuration=container-log4j.properties -Dyarn.app.container.log.dir=/hadoop/yarn/log/application_1448214558608_0016/container_e48_1448214558608_0016_01_000040 -Dyarn.app.container.log.filesize=0 -Dhadoop.root.logger=INFO,CLA -Dhadoop.root.logfile=syslog org.apache.hadoop.mapred.YarnChild 192.168.1.69 51857 attempt_1448214558608_0016_m_000002_2 52776558133288 1>/hadoop/yarn/log/application_1448214558608_0016/container_e48_1448214558608_0016_01_000040/stdout 2>/hadoop/yarn/log/application_1448214558608_0016/container_e48_1448214558608_0016_01_000040/stderr  
+	|- 9667 9653 9653 9653 (java) 5320 82 2237865984 133436 /usr/jdk64/jdk1.8.0_40/bin/java -server -XX:NewRatio=8 -Djava.net.preferIPv4Stack=true -Dhdp.version=2.3.0.0-2557 -Xmx409m -Djava.io.tmpdir=/hadoop/yarn/local/usercache/kannappan/appcache/application_1448214558608_0016/container_e48_1448214558608_0016_01_000040/tmp -Dlog4j.configuration=container-log4j.properties -Dyarn.app.container.log.dir=/hadoop/yarn/log/application_1448214558608_0016/container_e48_1448214558608_0016_01_000040 -Dyarn.app.container.log.filesize=0 -Dhadoop.root.logger=INFO,CLA -Dhadoop.root.logfile=syslog org.apache.hadoop.mapred.YarnChild 192.168.1.69 51857 attempt_1448214558608_0016_m_000002_2 52776558133288 
+
+Container killed on request. Exit code is 143
+Container exited with a non-zero exit code 143
+
+org.apache.pig.backend.executionengine.ExecException: ERROR 0: org.apache.pig.backend.executionengine.ExecException: ERROR 2997: Unable to recreate exception from backed error: Container [pid=9653,containerID=container_e48_1448214558608_0016_01_000040] is running beyond physical memory limits. Current usage: 522.6 MB of 512 MB physical memory used; 2.2 GB of 1.0 GB virtual memory used. Killing container.
+Dump of the process-tree for container_e48_1448214558608_0016_01_000040 :
+	|- PID PPID PGRPID SESSID CMD_NAME USER_MODE_TIME(MILLIS) SYSTEM_TIME(MILLIS) VMEM_USAGE(BYTES) RSSMEM_USAGE(PAGES) FULL_CMD_LINE
+	|- 9653 9651 9653 9653 (bash) 0 0 115843072 359 /bin/bash -c /usr/jdk64/jdk1.8.0_40/bin/java -server -XX:NewRatio=8 -Djava.net.preferIPv4Stack=true -Dhdp.version=2.3.0.0-2557 -Xmx409m -Djava.io.tmpdir=/hadoop/yarn/local/usercache/kannappan/appcache/application_1448214558608_0016/container_e48_1448214558608_0016_01_000040/tmp -Dlog4j.configuration=container-log4j.properties -Dyarn.app.container.log.dir=/hadoop/yarn/log/application_1448214558608_0016/container_e48_1448214558608_0016_01_000040 -Dyarn.app.container.log.filesize=0 -Dhadoop.root.logger=INFO,CLA -Dhadoop.root.logfile=syslog org.apache.hadoop.mapred.YarnChild 192.168.1.69 51857 attempt_1448214558608_0016_m_000002_2 52776558133288 1>/hadoop/yarn/log/application_1448214558608_0016/container_e48_1448214558608_0016_01_000040/stdout 2>/hadoop/yarn/log/application_1448214558608_0016/container_e48_1448214558608_0016_01_000040/stderr  
+	|- 9667 9653 9653 9653 (java) 5320 82 2237865984 133436 /usr/jdk64/jdk1.8.0_40/bin/java -server -XX:NewRatio=8 -Djava.net.preferIPv4Stack=true -Dhdp.version=2.3.0.0-2557 -Xmx409m -Djava.io.tmpdir=/hadoop/yarn/local/usercache/kannappan/appcache/application_1448214558608_0016/container_e48_1448214558608_0016_01_000040/tmp -Dlog4j.configuration=container-log4j.properties -Dyarn.app.container.log.dir=/hadoop/yarn/log/application_1448214558608_0016/container_e48_1448214558608_0016_01_000040 -Dyarn.app.container.log.filesize=0 -Dhadoop.root.logger=INFO,CLA -Dhadoop.root.logfile=syslog org.apache.hadoop.mapred.YarnChild 192.168.1.69 51857 attempt_1448214558608_0016_m_000002_2 52776558133288 
+
+Container killed on request. Exit code is 143
+Container exited with a non-zero exit code 143
+
+	at org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher.getStats(MapReduceLauncher.java:819)
+	at org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher.launchPig(MapReduceLauncher.java:452)
+	at org.apache.pig.backend.hadoop.executionengine.HExecutionEngine.launchPig(HExecutionEngine.java:304)
+	at org.apache.pig.PigServer.launchPlan(PigServer.java:1390)
+	at org.apache.pig.PigServer.executeCompiledLogicalPlan(PigServer.java:1375)
+	at org.apache.pig.PigServer.execute(PigServer.java:1364)
+	at org.apache.pig.PigServer.executeBatch(PigServer.java:415)
+	at org.apache.pig.PigServer.executeBatch(PigServer.java:398)
+	at org.apache.pig.tools.grunt.GruntParser.executeBatch(GruntParser.java:171)
+	at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:234)
+	at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:205)
+	at org.apache.pig.tools.grunt.Grunt.exec(Grunt.java:81)
+	at org.apache.pig.Main.run(Main.java:631)
+	at org.apache.pig.Main.main(Main.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.hadoop.util.RunJar.run(RunJar.java:221)
+	at org.apache.hadoop.util.RunJar.main(RunJar.java:136)
+Caused by: org.apache.pig.backend.executionengine.ExecException: ERROR 2997: Unable to recreate exception from backed error: Container [pid=9653,containerID=container_e48_1448214558608_0016_01_000040] is running beyond physical memory limits. Current usage: 522.6 MB of 512 MB physical memory used; 2.2 GB of 1.0 GB virtual memory used. Killing container.
+Dump of the process-tree for container_e48_1448214558608_0016_01_000040 :
+	|- PID PPID PGRPID SESSID CMD_NAME USER_MODE_TIME(MILLIS) SYSTEM_TIME(MILLIS) VMEM_USAGE(BYTES) RSSMEM_USAGE(PAGES) FULL_CMD_LINE
+	|- 9653 9651 9653 9653 (bash) 0 0 115843072 359 /bin/bash -c /usr/jdk64/jdk1.8.0_40/bin/java -server -XX:NewRatio=8 -Djava.net.preferIPv4Stack=true -Dhdp.version=2.3.0.0-2557 -Xmx409m -Djava.io.tmpdir=/hadoop/yarn/local/usercache/kannappan/appcache/application_1448214558608_0016/container_e48_1448214558608_0016_01_000040/tmp -Dlog4j.configuration=container-log4j.properties -Dyarn.app.container.log.dir=/hadoop/yarn/log/application_1448214558608_0016/container_e48_1448214558608_0016_01_000040 -Dyarn.app.container.log.filesize=0 -Dhadoop.root.logger=INFO,CLA -Dhadoop.root.logfile=syslog org.apache.hadoop.mapred.YarnChild 192.168.1.69 51857 attempt_1448214558608_0016_m_000002_2 52776558133288 1>/hadoop/yarn/log/application_1448214558608_0016/container_e48_1448214558608_0016_01_000040/stdout 2>/hadoop/yarn/log/application_1448214558608_0016/container_e48_1448214558608_0016_01_000040/stderr  
+	|- 9667 9653 9653 9653 (java) 5320 82 2237865984 133436 /usr/jdk64/jdk1.8.0_40/bin/java -server -XX:NewRatio=8 -Djava.net.preferIPv4Stack=true -Dhdp.version=2.3.0.0-2557 -Xmx409m -Djava.io.tmpdir=/hadoop/yarn/local/usercache/kannappan/appcache/application_1448214558608_0016/container_e48_1448214558608_0016_01_000040/tmp -Dlog4j.configuration=container-log4j.properties -Dyarn.app.container.log.dir=/hadoop/yarn/log/application_1448214558608_0016/container_e48_1448214558608_0016_01_000040 -Dyarn.app.container.log.filesize=0 -Dhadoop.root.logger=INFO,CLA -Dhadoop.root.logfile=syslog org.apache.hadoop.mapred.YarnChild 192.168.1.69 51857 attempt_1448214558608_0016_m_000002_2 52776558133288 
+
+Container killed on request. Exit code is 143
+Container exited with a non-zero exit code 143
+
+	at org.apache.pig.backend.hadoop.executionengine.Launcher.getErrorMessages(Launcher.java:215)
+	at org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher.getStats(MapReduceLauncher.java:803)
+	... 19 more
+================================================================================
