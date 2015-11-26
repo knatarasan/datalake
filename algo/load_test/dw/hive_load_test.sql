@@ -602,6 +602,9 @@ hive> explain select count(*) from
     > material_xx16,material_xx17,material_xx18,material_xx19,material_xx20,material_xx21,eff_from_date,eff_to_date
     > ) MM;
 OK
+
+1<--2<--0
+
 STAGE DEPENDENCIES:
   Stage-1 is a root stage
   Stage-2 depends on stages: Stage-1
@@ -609,7 +612,7 @@ STAGE DEPENDENCIES:
 
 STAGE PLANS:
   Stage: Stage-1
-    Map Reduce
+    Map Reduced
       Map Operator Tree:
           TableScan
             alias: d_item2
@@ -681,3 +684,215 @@ Time taken: 0.474 seconds, Fetched: 74 row(s)
 
 
 ----------Populate duplicate data and de-duplicate it -----------------------
+
+
+
+--------Explain plan -------
+
+hive> explain select I.item_id from d_item I join f_invoice N on I.item_id = N.item_id;
+OK
+STAGE DEPENDENCIES:
+  Stage-5 is a root stage , consists of Stage-1
+  Stage-1
+  Stage-0 depends on stages: Stage-1
+
+STAGE PLANS:
+  Stage: Stage-5
+    Conditional Operator
+
+  Stage: Stage-1
+    Map Reduce
+      Map Operator Tree:
+          TableScan
+            alias: i
+            filterExpr: item_id is not null (type: boolean)
+            Statistics: Num rows: 119512704 Data size: 478050816 Basic stats: COMPLETE Column stats: NONE
+            Filter Operator
+              predicate: item_id is not null (type: boolean)
+              Statistics: Num rows: 59756352 Data size: 239025408 Basic stats: COMPLETE Column stats: NONE
+              Reduce Output Operator
+                key expressions: item_id (type: int)
+                sort order: +
+                Map-reduce partition columns: item_id (type: int)
+                Statistics: Num rows: 59756352 Data size: 239025408 Basic stats: COMPLETE Column stats: NONE
+          TableScan
+            alias: n
+            filterExpr: item_id is not null (type: boolean)
+            Statistics: Num rows: 150413312 Data size: 601653248 Basic stats: COMPLETE Column stats: NONE
+            Filter Operator
+              predicate: item_id is not null (type: boolean)
+              Statistics: Num rows: 75206656 Data size: 300826624 Basic stats: COMPLETE Column stats: NONE
+              Reduce Output Operator
+                key expressions: item_id (type: int)
+                sort order: +
+                Map-reduce partition columns: item_id (type: int)
+                Statistics: Num rows: 75206656 Data size: 300826624 Basic stats: COMPLETE Column stats: NONE
+      Reduce Operator Tree:
+        Join Operator
+          condition map:
+               Inner Join 0 to 1
+          keys:
+            0 item_id (type: int)
+            1 item_id (type: int)
+          outputColumnNames: _col0
+          Statistics: Num rows: 82727323 Data size: 330909293 Basic stats: COMPLETE Column stats: NONE
+          File Output Operator
+            compressed: false
+            Statistics: Num rows: 82727323 Data size: 330909293 Basic stats: COMPLETE Column stats: NONE
+            table:
+                input format: org.apache.hadoop.mapred.TextInputFormat
+                output format: org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat
+                serde: org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe
+
+  Stage: Stage-0
+    Fetch Operator
+      limit: -1
+      Processor Tree:
+        ListSink
+
+Time taken: 0.853 seconds, Fetched: 59 row(s)
+hive> 
+
+
+hive> explain select count(*) from onecol;
+OK
+STAGE DEPENDENCIES:
+  Stage-1 is a root stage
+  Stage-0 depends on stages: Stage-1
+
+STAGE PLANS:
+  Stage: Stage-1
+    Map Reduce
+      Map Operator Tree:
+          TableScan
+            alias: onecol
+            Statistics: Num rows: 1 Data size: 0 Basic stats: PARTIAL Column stats: COMPLETE
+            Select Operator
+              Statistics: Num rows: 1 Data size: 0 Basic stats: PARTIAL Column stats: COMPLETE
+              Group By Operator
+                aggregations: count()
+                mode: hash
+                outputColumnNames: _col0
+                Statistics: Num rows: 1 Data size: 8 Basic stats: COMPLETE Column stats: COMPLETE
+                Reduce Output Operator
+                  sort order: 
+                  Statistics: Num rows: 1 Data size: 8 Basic stats: COMPLETE Column stats: COMPLETE
+                  value expressions: _col0 (type: bigint)
+      Reduce Operator Tree:
+        Group By Operator
+          aggregations: count(VALUE._col0)
+          mode: mergepartial
+          outputColumnNames: _col0
+          Statistics: Num rows: 1 Data size: 8 Basic stats: COMPLETE Column stats: COMPLETE
+          File Output Operator
+            compressed: false
+            Statistics: Num rows: 1 Data size: 8 Basic stats: COMPLETE Column stats: COMPLETE
+            table:
+                input format: org.apache.hadoop.mapred.TextInputFormat
+                output format: org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat
+                serde: org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe
+
+  Stage: Stage-0
+    Fetch Operator
+      limit: -1
+      Processor Tree:
+        ListSink
+
+Time taken: 0.285 seconds, Fetched: 42 row(s)
+hive> 
+
+
+
+hive> explain select count(*) from (
+    > select I.item_id from d_item I join f_invoice N on I.item_id = N.item_id
+    > )AA  ;
+OK
+STAGE DEPENDENCIES:
+  Stage-6 is a root stage , consists of Stage-1
+  Stage-1
+  Stage-2 depends on stages: Stage-1
+  Stage-0 depends on stages: Stage-2
+
+STAGE PLANS:
+  Stage: Stage-6
+    Conditional Operator
+
+  Stage: Stage-1
+    Map Reduce
+      Map Operator Tree:
+          TableScan
+            alias: i
+            filterExpr: item_id is not null (type: boolean)
+            Statistics: Num rows: 119512704 Data size: 478050816 Basic stats: COMPLETE Column stats: NONE
+            Filter Operator
+              predicate: item_id is not null (type: boolean)
+              Statistics: Num rows: 59756352 Data size: 239025408 Basic stats: COMPLETE Column stats: NONE
+              Reduce Output Operator
+                key expressions: item_id (type: int)
+                sort order: +
+                Map-reduce partition columns: item_id (type: int)
+                Statistics: Num rows: 59756352 Data size: 239025408 Basic stats: COMPLETE Column stats: NONE
+          TableScan
+            alias: n
+            filterExpr: item_id is not null (type: boolean)
+            Statistics: Num rows: 150413312 Data size: 601653248 Basic stats: COMPLETE Column stats: NONE
+            Filter Operator
+              predicate: item_id is not null (type: boolean)
+              Statistics: Num rows: 75206656 Data size: 300826624 Basic stats: COMPLETE Column stats: NONE
+              Reduce Output Operator
+                key expressions: item_id (type: int)
+                sort order: +
+                Map-reduce partition columns: item_id (type: int)
+                Statistics: Num rows: 75206656 Data size: 300826624 Basic stats: COMPLETE Column stats: NONE
+      Reduce Operator Tree:
+        Join Operator
+          condition map:
+               Inner Join 0 to 1
+          keys:
+            0 item_id (type: int)
+            1 item_id (type: int)
+          Statistics: Num rows: 82727323 Data size: 330909293 Basic stats: COMPLETE Column stats: NONE
+          Group By Operator
+            aggregations: count()
+            mode: hash
+            outputColumnNames: _col0
+            Statistics: Num rows: 1 Data size: 8 Basic stats: COMPLETE Column stats: NONE
+            File Output Operator
+              compressed: false
+              table:
+                  input format: org.apache.hadoop.mapred.SequenceFileInputFormat
+                  output format: org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat
+                  serde: org.apache.hadoop.hive.serde2.lazybinary.LazyBinarySerDe
+
+  Stage: Stage-2
+    Map Reduce
+      Map Operator Tree:
+          TableScan
+            Reduce Output Operator
+              sort order: 
+              Statistics: Num rows: 1 Data size: 8 Basic stats: COMPLETE Column stats: NONE
+              value expressions: _col0 (type: bigint)
+      Reduce Operator Tree:
+        Group By Operator
+          aggregations: count(VALUE._col0)
+          mode: mergepartial
+          outputColumnNames: _col0
+          Statistics: Num rows: 1 Data size: 8 Basic stats: COMPLETE Column stats: NONE
+          File Output Operator
+            compressed: false
+            Statistics: Num rows: 1 Data size: 8 Basic stats: COMPLETE Column stats: NONE
+            table:
+                input format: org.apache.hadoop.mapred.TextInputFormat
+                output format: org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat
+                serde: org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe
+
+  Stage: Stage-0
+    Fetch Operator
+      limit: -1
+      Processor Tree:
+        ListSink
+
+Time taken: 0.755 seconds, Fetched: 85 row(s)
+hive> 
+
+
