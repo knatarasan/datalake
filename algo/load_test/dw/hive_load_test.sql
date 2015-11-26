@@ -1,8 +1,18 @@
 
 
+
+
+
+
+
 select count(*) from (
 select I.item_id from d_item_bucket I join f_invoice_bucket N on I.item_id = N.item_id
 )AA  ;
+
+select count(*) from d_item;
+2097152
+select count(*) from f_invoice;
+2097152
 
 
 select count(*) from (
@@ -444,3 +454,230 @@ N.inv_fact3 ,
 N.inv_fact4 ,
 N.BSE_XX5  
 from d_item I join f_invoice N on I.item_id = N.item_id;
+
+
+----------Populate duplicate data and de-duplicate it -----------------------
+select count(*) from d_item;
+2097152
+select count(*) from f_invoice;
+2097152
+
+
+hive> create view d_Item_v as select * from d_Item;
+
+hive> insert into table d_item2 select * from d_Item union all select * from d_Item_v;
+
+hive>select count(*) from item2
+4194304
+
+
+hive> select * from item_id_dups;
+OK
+72849	mat_num62529902218.4	mat_typ22212810835.06794	MT_sec	MAT_GR	MEI	BST	MAX01	MAX02	MAX03	MAX04	MAX05	MAX06	MAX07	MAX08MAX09	MAX10	MAX11	MAX12	MAX13	MAX14	MAX15	MAX16	MAX17	MAX18	MAX19	MAX20	MAX21	2015-10-10	2999-12-31
+72849	mat_num62529902218.4	mat_typ22212810835.06794	MT_sec	MAT_GR	MEI	BST	MAX01	MAX02	MAX03	MAX04	MAX05	MAX06	MAX07	MAX08MAX09	MAX10	MAX11	MAX12	MAX13	MAX14	MAX15	MAX16	MAX17	MAX18	MAX19	MAX20	MAX21	2015-10-10	2999-12-31
+72859	mat_num13046516210.8	mat_typ9191254348.672232	MT_sec	MAT_GR	MEI	BST	MAX01	MAX02	MAX03	MAX04	MAX05	MAX06	MAX07	MAX08MAX09	MAX10	MAX11	MAX12	MAX13	MAX14	MAX15	MAX16	MAX17	MAX18	MAX19	MAX20	MAX21	2015-10-10	2999-12-31
+72859	mat_num13046516210.8	mat_typ9191254348.672232	MT_sec	MAT_GR	MEI	BST	MAX01	MAX02	MAX03	MAX04	MAX05	MAX06	MAX07	MAX08MAX09	MAX10	MAX11	MAX12	MAX13	MAX14	MAX15	MAX16	MAX17	MAX18	MAX19	MAX20	MAX21	2015-10-10	2999-12-31
+72863	mat_num93251476709.9	mat_typ6945486000.688269	MT_sec	MAT_GR	MEI	BST	MAX01	MAX02	MAX03	MAX04	MAX05	MAX06	MAX07	MAX08MAX09	MAX10	MAX11	MAX12	MAX13	MAX14	MAX15	MAX16	MAX17	MAX18	MAX19	MAX20	MAX21	2015-10-10	2999-12-31
+72863	mat_num93251476709.9	mat_typ6945486000.688269	MT_sec	MAT_GR	MEI	BST	MAX01	MAX02	MAX03	MAX04	MAX05	MAX06	MAX07	MAX08MAX09	MAX10	MAX11	MAX12	MAX13	MAX14	MAX15	MAX16	MAX17	MAX18	MAX19	MAX20	MAX21	2015-10-10	2999-12-31
+Time taken: 0.418 seconds, Fetched: 6 row(s)
+hive> 
+
+explain select count(*) from 
+(select 
+item_id	,material_number	,material_type	,industry_sector	,material_group	,base_unit_of_measure	,order_unit	,
+material_xx1	,material_xx2	,material_xx3	,material_xx4	,material_xx5	,material_xx6	,material_xx7	,material_xx8	,
+material_xx9	,material_xx10	,material_xx11	,material_xx12	,material_xx13	,material_xx14	,material_xx15	,material_xx16	,
+material_xx17	,material_xx18	,material_xx19	,material_xx20	,material_xx21	,eff_from_date	,eff_to_date	 
+from  d_Item2 group by 
+item_id	,material_number	,material_type	,industry_sector	,material_group	,base_unit_of_measure	,order_unit	,
+material_xx1	,material_xx2	,material_xx3	,material_xx4	,material_xx5	,material_xx6	,material_xx7	,
+material_xx8	,material_xx9	,material_xx10	,material_xx11	,material_xx12	,material_xx13	,material_xx14	,material_xx15	,
+material_xx16	,material_xx17	,material_xx18	,material_xx19	,material_xx20	,material_xx21	,eff_from_date,eff_to_date	
+) MM;
+
+
+--- Following query de-duplicates successfully ----------------------
+
+hive> select count(*) from 
+    > (select 
+    > item_id,material_number,material_type,industry_sector,material_group,base_unit_of_measure,order_unit,
+    > material_xx1,material_xx2,material_xx3,material_xx4,material_xx5,material_xx6,material_xx7,material_xx8,
+    > material_xx9,material_xx10,material_xx11,material_xx12,material_xx13,material_xx14,material_xx15,material_xx16,
+    > material_xx17,material_xx18,material_xx19,material_xx20,material_xx21,eff_from_date,eff_to_date 
+    > from  d_Item2 group by 
+    > item_id,material_number,material_type,industry_sector,material_group,base_unit_of_measure,order_unit,
+    > material_xx1,material_xx2,material_xx3,material_xx4,material_xx5,material_xx6,material_xx7,
+    > material_xx8,material_xx9,material_xx10,material_xx11,material_xx12,material_xx13,material_xx14,material_xx15,
+    > material_xx16,material_xx17,material_xx18,material_xx19,material_xx20,material_xx21,eff_from_date,eff_to_date
+    > ) MM;
+Query ID = kannappan_20151126084242_6865fc37-4c53-4a28-99a1-f382f23dfb69
+Total jobs = 2
+Launching Job 1 out of 2
+Number of reduce tasks not specified. Estimated from input data size: 14
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Starting Job = job_1448551896589_0015, Tracking URL = http://wn2.kara:8088/proxy/application_1448551896589_0015/
+Kill Command = /usr/hdp/2.3.0.0-2557/hadoop/bin/hadoop job  -kill job_1448551896589_0015
+Hadoop job information for Stage-1: number of mappers: 4; number of reducers: 14
+2015-11-26 08:42:54,508 Stage-1 map = 0%,  reduce = 0%
+2015-11-26 08:43:27,341 Stage-1 map = 8%,  reduce = 0%, Cumulative CPU 200.94 sec
+2015-11-26 08:43:33,756 Stage-1 map = 17%,  reduce = 0%, Cumulative CPU 231.24 sec
+2015-11-26 08:43:39,294 Stage-1 map = 42%,  reduce = 0%, Cumulative CPU 261.8 sec
+2015-11-26 08:43:45,928 Stage-1 map = 58%,  reduce = 0%, Cumulative CPU 289.4 sec
+2015-11-26 08:43:52,739 Stage-1 map = 67%,  reduce = 1%, Cumulative CPU 305.9 sec
+2015-11-26 08:43:53,807 Stage-1 map = 75%,  reduce = 4%, Cumulative CPU 308.72 sec
+2015-11-26 08:43:55,996 Stage-1 map = 75%,  reduce = 5%, Cumulative CPU 312.65 sec
+2015-11-26 08:43:58,145 Stage-1 map = 75%,  reduce = 7%, Cumulative CPU 314.43 sec
+2015-11-26 08:44:02,413 Stage-1 map = 83%,  reduce = 7%, Cumulative CPU 321.04 sec
+2015-11-26 08:44:29,021 Stage-1 map = 92%,  reduce = 7%, Cumulative CPU 346.6 sec
+2015-11-26 08:44:30,081 Stage-1 map = 100%,  reduce = 7%, Cumulative CPU 347.35 sec
+2015-11-26 08:44:33,350 Stage-1 map = 100%,  reduce = 10%, Cumulative CPU 352.14 sec
+2015-11-26 08:44:34,432 Stage-1 map = 100%,  reduce = 13%, Cumulative CPU 355.6 sec
+2015-11-26 08:44:35,564 Stage-1 map = 100%,  reduce = 16%, Cumulative CPU 361.19 sec
+2015-11-26 08:44:36,652 Stage-1 map = 100%,  reduce = 21%, Cumulative CPU 372.06 sec
+2015-11-26 08:44:37,815 Stage-1 map = 100%,  reduce = 22%, Cumulative CPU 378.67 sec
+2015-11-26 08:44:38,965 Stage-1 map = 100%,  reduce = 26%, Cumulative CPU 395.57 sec
+2015-11-26 08:44:42,157 Stage-1 map = 100%,  reduce = 28%, Cumulative CPU 399.58 sec
+2015-11-26 08:44:43,316 Stage-1 map = 100%,  reduce = 29%, Cumulative CPU 400.77 sec
+2015-11-26 08:44:49,166 Stage-1 map = 100%,  reduce = 34%, Cumulative CPU 410.33 sec
+2015-11-26 08:44:50,268 Stage-1 map = 100%,  reduce = 44%, Cumulative CPU 421.85 sec
+2015-11-26 08:44:52,410 Stage-1 map = 100%,  reduce = 45%, Cumulative CPU 425.61 sec
+2015-11-26 08:44:53,529 Stage-1 map = 100%,  reduce = 49%, Cumulative CPU 438.86 sec
+2015-11-26 08:44:55,858 Stage-1 map = 100%,  reduce = 55%, Cumulative CPU 448.06 sec
+2015-11-26 08:44:59,947 Stage-1 map = 100%,  reduce = 56%, Cumulative CPU 454.36 sec
+2015-11-26 08:45:01,035 Stage-1 map = 100%,  reduce = 57%, Cumulative CPU 456.64 sec
+2015-11-26 08:45:03,329 Stage-1 map = 100%,  reduce = 62%, Cumulative CPU 467.8 sec
+2015-11-26 08:45:05,513 Stage-1 map = 100%,  reduce = 70%, Cumulative CPU 482.06 sec
+2015-11-26 08:45:07,694 Stage-1 map = 100%,  reduce = 75%, Cumulative CPU 488.39 sec
+2015-11-26 08:45:08,784 Stage-1 map = 100%,  reduce = 76%, Cumulative CPU 492.46 sec
+2015-11-26 08:45:09,878 Stage-1 map = 100%,  reduce = 78%, Cumulative CPU 498.06 sec
+2015-11-26 08:45:13,365 Stage-1 map = 100%,  reduce = 83%, Cumulative CPU 508.01 sec
+2015-11-26 08:45:16,403 Stage-1 map = 100%,  reduce = 85%, Cumulative CPU 513.44 sec
+2015-11-26 08:45:17,492 Stage-1 map = 100%,  reduce = 90%, Cumulative CPU 522.36 sec
+2015-11-26 08:45:19,750 Stage-1 map = 100%,  reduce = 98%, Cumulative CPU 539.49 sec
+2015-11-26 08:45:23,101 Stage-1 map = 100%,  reduce = 99%, Cumulative CPU 546.49 sec
+2015-11-26 08:45:24,163 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 547.38 sec
+MapReduce Total cumulative CPU time: 9 minutes 7 seconds 380 msec
+Ended Job = job_1448551896589_0015
+Launching Job 2 out of 2
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Starting Job = job_1448551896589_0016, Tracking URL = http://wn2.kara:8088/proxy/application_1448551896589_0016/
+Kill Command = /usr/hdp/2.3.0.0-2557/hadoop/bin/hadoop job  -kill job_1448551896589_0016
+Hadoop job information for Stage-2: number of mappers: 2; number of reducers: 1
+2015-11-26 08:45:39,686 Stage-2 map = 0%,  reduce = 0%
+2015-11-26 08:45:47,820 Stage-2 map = 50%,  reduce = 0%, Cumulative CPU 3.87 sec
+2015-11-26 08:45:51,106 Stage-2 map = 100%,  reduce = 0%, Cumulative CPU 8.42 sec
+2015-11-26 08:45:57,492 Stage-2 map = 100%,  reduce = 100%, Cumulative CPU 12.64 sec
+MapReduce Total cumulative CPU time: 12 seconds 640 msec
+Ended Job = job_1448551896589_0016
+MapReduce Jobs Launched: 
+Stage-Stage-1: Map: 4  Reduce: 14   Cumulative CPU: 547.38 sec   HDFS Read: 939623574 HDFS Write: 1638 SUCCESS
+Stage-Stage-2: Map: 2  Reduce: 1   Cumulative CPU: 12.64 sec   HDFS Read: 11030 HDFS Write: 8 SUCCESS
+Total MapReduce CPU Time Spent: 9 minutes 20 seconds 20 msec
+OK
+2097152
+Time taken: 197.499 seconds, Fetched: 1 row(s)
+
+
+hive> explain select count(*) from 
+    > (select 
+    > item_id,material_number,material_type,industry_sector,material_group,base_unit_of_measure,order_unit,
+    > material_xx1,material_xx2,material_xx3,material_xx4,material_xx5,material_xx6,material_xx7,material_xx8,
+    > material_xx9,material_xx10,material_xx11,material_xx12,material_xx13,material_xx14,material_xx15,material_xx16,
+    > material_xx17,material_xx18,material_xx19,material_xx20,material_xx21,eff_from_date,eff_to_date 
+    > from  d_Item2 group by 
+    > item_id,material_number,material_type,industry_sector,material_group,base_unit_of_measure,order_unit,
+    > material_xx1,material_xx2,material_xx3,material_xx4,material_xx5,material_xx6,material_xx7,
+    > material_xx8,material_xx9,material_xx10,material_xx11,material_xx12,material_xx13,material_xx14,material_xx15,
+    > material_xx16,material_xx17,material_xx18,material_xx19,material_xx20,material_xx21,eff_from_date,eff_to_date
+    > ) MM;
+OK
+STAGE DEPENDENCIES:
+  Stage-1 is a root stage
+  Stage-2 depends on stages: Stage-1
+  Stage-0 depends on stages: Stage-2
+
+STAGE PLANS:
+  Stage: Stage-1
+    Map Reduce
+      Map Operator Tree:
+          TableScan
+            alias: d_item2
+            Statistics: Num rows: 4194304 Data size: 934419322 Basic stats: COMPLETE Column stats: NONE
+            Select Operator
+              expressions: item_id (type: int), material_number (type: varchar(20)), material_type (type: varchar(50)), industry_sector (type: varchar(50)), material_group (type: varchar(20)), base_unit_of_measure (type: varchar(3)), order_unit (type: varchar(3)), material_xx1 (type: varchar(50)), material_xx2 (type: varchar(50)), material_xx3 (type: varchar(50)), material_xx4 (type: varchar(50)), material_xx5 (type: varchar(50)), material_xx6 (type: varchar(50)), material_xx7 (type: varchar(50)), material_xx8 (type: varchar(50)), material_xx9 (type: varchar(50)), material_xx10 (type: varchar(50)), material_xx11 (type: varchar(50)), material_xx12 (type: varchar(50)), material_xx13 (type: varchar(50)), material_xx14 (type: varchar(50)), material_xx15 (type: varchar(50)), material_xx16 (type: varchar(50)), material_xx17 (type: varchar(50)), material_xx18 (type: varchar(50)), material_xx19 (type: varchar(50)), material_xx20 (type: varchar(50)), material_xx21 (type: varchar(50)), eff_from_date (type: date), eff_to_date (type: date)
+              outputColumnNames: item_id, material_number, material_type, industry_sector, material_group, base_unit_of_measure, order_unit, material_xx1, material_xx2, material_xx3, material_xx4, material_xx5, material_xx6, material_xx7, material_xx8, material_xx9, material_xx10, material_xx11, material_xx12, material_xx13, material_xx14, material_xx15, material_xx16, material_xx17, material_xx18, material_xx19, material_xx20, material_xx21, eff_from_date, eff_to_date
+              Statistics: Num rows: 4194304 Data size: 934419322 Basic stats: COMPLETE Column stats: NONE
+              Group By Operator
+                keys: item_id (type: int), material_number (type: varchar(20)), material_type (type: varchar(50)), industry_sector (type: varchar(50)), material_group (type: varchar(20)), base_unit_of_measure (type: varchar(3)), order_unit (type: varchar(3)), material_xx1 (type: varchar(50)), material_xx2 (type: varchar(50)), material_xx3 (type: varchar(50)), material_xx4 (type: varchar(50)), material_xx5 (type: varchar(50)), material_xx6 (type: varchar(50)), material_xx7 (type: varchar(50)), material_xx8 (type: varchar(50)), material_xx9 (type: varchar(50)), material_xx10 (type: varchar(50)), material_xx11 (type: varchar(50)), material_xx12 (type: varchar(50)), material_xx13 (type: varchar(50)), material_xx14 (type: varchar(50)), material_xx15 (type: varchar(50)), material_xx16 (type: varchar(50)), material_xx17 (type: varchar(50)), material_xx18 (type: varchar(50)), material_xx19 (type: varchar(50)), material_xx20 (type: varchar(50)), material_xx21 (type: varchar(50)), eff_from_date (type: date), eff_to_date (type: date)
+                mode: hash
+                outputColumnNames: _col0, _col1, _col2, _col3, _col4, _col5, _col6, _col7, _col8, _col9, _col10, _col11, _col12, _col13, _col14, _col15, _col16, _col17, _col18, _col19, _col20, _col21, _col22, _col23, _col24, _col25, _col26, _col27, _col28, _col29
+                Statistics: Num rows: 4194304 Data size: 934419322 Basic stats: COMPLETE Column stats: NONE
+                Reduce Output Operator
+                  key expressions: _col0 (type: int), _col1 (type: varchar(20)), _col2 (type: varchar(50)), _col3 (type: varchar(50)), _col4 (type: varchar(20)), _col5 (type: varchar(3)), _col6 (type: varchar(3)), _col7 (type: varchar(50)), _col8 (type: varchar(50)), _col9 (type: varchar(50)), _col10 (type: varchar(50)), _col11 (type: varchar(50)), _col12 (type: varchar(50)), _col13 (type: varchar(50)), _col14 (type: varchar(50)), _col15 (type: varchar(50)), _col16 (type: varchar(50)), _col17 (type: varchar(50)), _col18 (type: varchar(50)), _col19 (type: varchar(50)), _col20 (type: varchar(50)), _col21 (type: varchar(50)), _col22 (type: varchar(50)), _col23 (type: varchar(50)), _col24 (type: varchar(50)), _col25 (type: varchar(50)), _col26 (type: varchar(50)), _col27 (type: varchar(50)), _col28 (type: date), _col29 (type: date)
+                  sort order: ++++++++++++++++++++++++++++++
+                  Map-reduce partition columns: _col0 (type: int), _col1 (type: varchar(20)), _col2 (type: varchar(50)), _col3 (type: varchar(50)), _col4 (type: varchar(20)), _col5 (type: varchar(3)), _col6 (type: varchar(3)), _col7 (type: varchar(50)), _col8 (type: varchar(50)), _col9 (type: varchar(50)), _col10 (type: varchar(50)), _col11 (type: varchar(50)), _col12 (type: varchar(50)), _col13 (type: varchar(50)), _col14 (type: varchar(50)), _col15 (type: varchar(50)), _col16 (type: varchar(50)), _col17 (type: varchar(50)), _col18 (type: varchar(50)), _col19 (type: varchar(50)), _col20 (type: varchar(50)), _col21 (type: varchar(50)), _col22 (type: varchar(50)), _col23 (type: varchar(50)), _col24 (type: varchar(50)), _col25 (type: varchar(50)), _col26 (type: varchar(50)), _col27 (type: varchar(50)), _col28 (type: date), _col29 (type: date)
+                  Statistics: Num rows: 4194304 Data size: 934419322 Basic stats: COMPLETE Column stats: NONE
+      Reduce Operator Tree:
+        Group By Operator
+          keys: KEY._col0 (type: int), KEY._col1 (type: varchar(20)), KEY._col2 (type: varchar(50)), KEY._col3 (type: varchar(50)), KEY._col4 (type: varchar(20)), KEY._col5 (type: varchar(3)), KEY._col6 (type: varchar(3)), KEY._col7 (type: varchar(50)), KEY._col8 (type: varchar(50)), KEY._col9 (type: varchar(50)), KEY._col10 (type: varchar(50)), KEY._col11 (type: varchar(50)), KEY._col12 (type: varchar(50)), KEY._col13 (type: varchar(50)), KEY._col14 (type: varchar(50)), KEY._col15 (type: varchar(50)), KEY._col16 (type: varchar(50)), KEY._col17 (type: varchar(50)), KEY._col18 (type: varchar(50)), KEY._col19 (type: varchar(50)), KEY._col20 (type: varchar(50)), KEY._col21 (type: varchar(50)), KEY._col22 (type: varchar(50)), KEY._col23 (type: varchar(50)), KEY._col24 (type: varchar(50)), KEY._col25 (type: varchar(50)), KEY._col26 (type: varchar(50)), KEY._col27 (type: varchar(50)), KEY._col28 (type: date), KEY._col29 (type: date)
+          mode: mergepartial
+          outputColumnNames: _col0, _col1, _col2, _col3, _col4, _col5, _col6, _col7, _col8, _col9, _col10, _col11, _col12, _col13, _col14, _col15, _col16, _col17, _col18, _col19, _col20, _col21, _col22, _col23, _col24, _col25, _col26, _col27, _col28, _col29
+          Statistics: Num rows: 2097152 Data size: 467209661 Basic stats: COMPLETE Column stats: NONE
+          Select Operator
+            Statistics: Num rows: 2097152 Data size: 467209661 Basic stats: COMPLETE Column stats: NONE
+            Group By Operator
+              aggregations: count()
+              mode: hash
+              outputColumnNames: _col0
+              Statistics: Num rows: 1 Data size: 8 Basic stats: COMPLETE Column stats: NONE
+              File Output Operator
+                compressed: false
+                table:
+                    input format: org.apache.hadoop.mapred.SequenceFileInputFormat
+                    output format: org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat
+                    serde: org.apache.hadoop.hive.serde2.lazybinary.LazyBinarySerDe
+
+  Stage: Stage-2
+    Map Reduce
+      Map Operator Tree:
+          TableScan
+            Reduce Output Operator
+              sort order: 
+              Statistics: Num rows: 1 Data size: 8 Basic stats: COMPLETE Column stats: NONE
+              value expressions: _col0 (type: bigint)
+      Reduce Operator Tree:
+        Group By Operator
+          aggregations: count(VALUE._col0)
+          mode: mergepartial
+          outputColumnNames: _col0
+          Statistics: Num rows: 1 Data size: 8 Basic stats: COMPLETE Column stats: NONE
+          File Output Operator
+            compressed: false
+            Statistics: Num rows: 1 Data size: 8 Basic stats: COMPLETE Column stats: NONE
+            table:
+                input format: org.apache.hadoop.mapred.TextInputFormat
+                output format: org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat
+                serde: org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe
+
+  Stage: Stage-0
+    Fetch Operator
+      limit: -1
+      Processor Tree:
+        ListSink
+
+Time taken: 0.474 seconds, Fetched: 74 row(s)
+
+
+
+----------Populate duplicate data and de-duplicate it -----------------------
