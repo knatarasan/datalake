@@ -54,6 +54,8 @@ now
 *fail*
 		/usr/hdp/2.3.0.0-2557/spark/bin/spark-submit --master yarn --class JavaKafkaWordCount target/simple-project-1.0-jar-with-dependencies.jar wn1.kara:2181 now_Consumers twitter-topic 1
 *works*  Because current version installed  is spark 1.3.1
+*works*  Because current version installed  is spark 1.3.1
+
 
 
 
