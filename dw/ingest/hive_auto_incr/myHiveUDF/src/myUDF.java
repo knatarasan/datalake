@@ -3,14 +3,20 @@ import org.apache.hadoop.hive.ql.exec.UDF;
 import org.apache.hadoop.hive.ql.udf.UDFType;
 import org.apache.hadoop.io.LongWritable;
 
-/* test*/
-@UDFType(deterministic = false, stateful = true)
+/* Without the annotation @UDFType(deterministic = false) 
+ 		this UDF creates only one value 11  (10+1), ie, every call to UDF will return 11 
+ 
+ But using annotation @UDFType(deterministic = false) would work good
+ 		every call to UDF will return increment 
+ */
+@UDFType(deterministic = false)
+
 public class myUDF extends UDF
 {
   private LongWritable result = new LongWritable();
 
   public myUDF() {
-    result.set(2000000);
+    result.set(10);
   }
 
   public LongWritable evaluate() {
