@@ -16,37 +16,25 @@ truncate table ingest.em_mara_changed ;
 
 
 insert into ingest.em_mara_snap
+select
+concat('MAT',MATNR),MTART,MBRSH,MATKL,MEINS,BSTME,MAX01,MAX02,MAX03,MAX04,MAX05,MAX06,MAX07,MAX08,MAX09,MAX10,MAX11,
+MAX12,MAX13,MAX14,MAX15,MAX16,MAX17,MAX18,MAX19,MAX20,MAX21
+FROM `ingest`.`em_mara2` limit 10;
+
+#--1    Prepare dataset of for _new, (i.e, non of source_keys which are present in new available in dimension table 
+
+insert into ingest.em_mara_new 
 SELECT MATNR,
     MTART,    MBRSH,    MATKL,
     MEINS,    BSTME,    
     MAX01,    MAX02,
-    MAX03,    MAX04,    MAX05,    MAX06,
-    MAX07,    MAX08,    MAX09,    MAX10,
-    MAX11,    MAX12,    MAX13,    MAX14,
-    MAX15,    MAX16,    MAX17,    MAX18,
+    MAX03,    MAX04,    MAX05,    MAX06,    MAX07,    MAX08,    MAX09,    MAX10,
+    MAX11,    MAX12,    MAX13,    MAX14,    MAX15,    MAX16,    MAX17,    MAX18,
     MAX19,    MAX20,    MAX21
-FROM `ingest`.`em_mara3` ;
-
-
-#--1    Prepare dataset of for _new, (i.e, non of source_keys which are present in new available in dimension table 
-
-
-
-insert into ingest.em_mara_new 
-SELECT em_mara_snap.matnr,
-    `em_mara_snap`.`MTART`,    `em_mara_snap`.`MBRSH`,    `em_mara_snap`.`MATKL`,
-    `em_mara_snap`.`MEINS`,    `em_mara_snap`.`BSTME`,    `em_mara_snap`.`MAX01`,    `em_mara_snap`.`MAX02`,
-    `em_mara_snap`.`MAX03`,    `em_mara_snap`.`MAX04`,    `em_mara_snap`.`MAX05`,    `em_mara_snap`.`MAX06`,
-    `em_mara_snap`.`MAX07`,    `em_mara_snap`.`MAX08`,    `em_mara_snap`.`MAX09`,    `em_mara_snap`.`MAX10`,
-    `em_mara_snap`.`MAX11`,    `em_mara_snap`.`MAX12`,    `em_mara_snap`.`MAX13`,    `em_mara_snap`.`MAX14`,
-    `em_mara_snap`.`MAX15`,    `em_mara_snap`.`MAX16`,    `em_mara_snap`.`MAX17`,    `em_mara_snap`.`MAX18`,
-    `em_mara_snap`.`MAX19`,    `em_mara_snap`.`MAX20`,    `em_mara_snap`.`MAX21`
-FROM `ingest`.`em_mara_snap` em_mara_snap  LEFT join dw_sourcing.d_Item item
+FROM `ingest`.`em_mara_snap` LEFT join dw_sourcing.d_Item item
 on
-em_mara_snap.MATNR=item.material_number 
+MATNR=item.material_number 
 where item.material_number is null;
-
-#working
 
 #--2   Load brand new source keys into dimension table 
 
@@ -55,63 +43,75 @@ SELECT incr(), MATNR,
     MTART,    MBRSH,    MATKL,
     MEINS,    BSTME,    
     MAX01,    MAX02,
-    MAX03,    MAX04,    MAX05,    MAX06,
-    MAX07,    MAX08,    MAX09,    MAX10,
-    MAX11,    MAX12,    MAX13,    MAX14,
-    MAX15,    MAX16,    MAX17,    MAX18,
+    MAX03,    MAX04,    MAX05,    MAX06,    MAX07,    MAX08,    MAX09,    MAX10,
+    MAX11,    MAX12,    MAX13,    MAX14,    MAX15,    MAX16,    MAX17,    MAX18,
     MAX19,    MAX20,    MAX21,'2015-10-10','2999-12-31'
 FROM `ingest`.`em_mara_new`;
 #working
 
 #-- changes in source
 #--
-update ingest.em_mara_snap set mtart='mtart_change1' where matnr='matnum20000005';
+create table ingest.em_mara_snap2 like em_mara_snap;
 
+insert into ingest.em_mara_snap2
+select MATNR,
+    concat(MTART,'upd1'),    concat(MBRSH,'upd1'),    concat(MATKL,'upd1'),
+    MEINS,    BSTME,    
+    MAX01,    MAX02,
+    MAX03,    MAX04,    MAX05,    MAX06,    MAX07,    MAX08,    MAX09,    MAX10,
+    MAX11,    MAX12,    MAX13,    MAX14,    MAX15,    MAX16,    MAX17,    MAX18,
+    MAX19,    MAX20,    MAX21
+from ingest.em_mara_snap
+where substr(MATNR,4)> 20000005;
 
 #--3 	Get dimension Item rows which are existing in d_Item but there is change in columns
 --  for which history to be maintained (put them into _changed table)
 
 
 insert into ingest.em_mara_changed 
-SELECT em_mara_snap.MATNR,
-    `em_mara_snap`.`MTART`,    `em_mara_snap`.`MBRSH`,    `em_mara_snap`.`MATKL`,
-    `em_mara_snap`.`MEINS`,    `em_mara_snap`.`BSTME`,    `em_mara_snap`.`MAX01`,    `em_mara_snap`.`MAX02`,
-    `em_mara_snap`.`MAX03`,    `em_mara_snap`.`MAX04`,    `em_mara_snap`.`MAX05`,    `em_mara_snap`.`MAX06`,
-    `em_mara_snap`.`MAX07`,    `em_mara_snap`.`MAX08`,    `em_mara_snap`.`MAX09`,    `em_mara_snap`.`MAX10`,
-    `em_mara_snap`.`MAX11`,    `em_mara_snap`.`MAX12`,    `em_mara_snap`.`MAX13`,    `em_mara_snap`.`MAX14`,
-    `em_mara_snap`.`MAX15`,    `em_mara_snap`.`MAX16`,    `em_mara_snap`.`MAX17`,    `em_mara_snap`.`MAX18`,
-    `em_mara_snap`.`MAX19`,    `em_mara_snap`.`MAX20`,    `em_mara_snap`.`MAX21`
+SELECT AA.MATNR,AA.MTART,AA.MBRSH,AA.MATKL,AA.MEINS,AA.BSTME,AA.MAX01,AA.MAX02,AA.MAX03,AA.MAX04,AA.MAX05,
+AA.MAX06,AA.MAX07,AA.MAX08,AA.MAX09,AA.MAX10,AA.MAX11,AA.MAX12,AA.MAX13,AA.MAX14,AA.MAX15,AA.MAX16,AA.MAX17,
+AA.MAX18,AA.MAX19,AA.MAX20,AA.MAX21 from
+(SELECT MATNR,
+    MTART,    MBRSH,    MATKL,
+    MEINS,    BSTME,    
+    MAX01,    MAX02,
+    MAX03,    MAX04,    MAX05,    MAX06,    MAX07,    MAX08,    MAX09,    MAX10,
+    MAX11,    MAX12,    MAX13,    MAX14,    MAX15,    MAX16,    MAX17,    MAX18,
+    MAX19,    MAX20,    MAX21,item.material_type,item.industry_sector,item.material_group
 FROM `ingest`.`em_mara_snap2` em_mara_snap  inner join dw_sourcing.d_Item item
 on
 em_mara_snap.MATNR=item.material_number 
---and em_mara_snap.MTART<>item.material_type
-where item.eff_to_date='2999-12-31';
+where item.eff_to_date='2999-12-31')
+AA
+where (
+AA.MTART<>AA.material_type  or
+AA.MBRSH<>AA.industry_sector or
+AA.MATKL<>AA.material_group)
+;
 
 
 #-- 4.1 close existing rows
 
-update dw_sourcing.d_Item item join ingest.em_mara_changed em_mara_changed
-on item.material_number =em_mara_changed.MATNR
-and item.eff_to_date='2999-12-31'
- set eff_to_date='2015-10-11';
+update dw_sourcing.d_Item set eff_to_date='2015-10-11'
+where  eff_to_date='2999-12-31' and
+ material_number in
+(select MATNR from  ingest.em_mara_changed );
+
+
 
 #-- 4.2 Insert new rows
 
+
 insert into dw_sourcing.d_Item
-SELECT NULL, MATNR,
-    MTART,    MBRSH,    MATKL,
-    MEINS,    BSTME,
-    MAX01,    MAX02,
-    MAX03,    MAX04,    MAX05,    MAX06,
-    MAX07,    MAX08,    MAX09,    MAX10,
-    MAX11,    MAX12,    MAX13,    MAX14,
-    MAX15,    MAX16,    MAX17,    MAX18,
-    MAX19,    MAX20,    MAX21,'2015-10-11','2999-12-31'
-FROM `ingest`.`em_mara_changed`;
+SELECT incr(), chg.*, '2015-10-11','2999-12-31'
+FROM `ingest`.`em_mara_changed` chg;
 
 
 
-
+select item_id,material_number,material_type,industry_sector,material_group,base_unit_of_measure,
+eff_from_date,eff_to_date
+from dw_sourcing.d_Item order by 2;
 
 --------------------Exec log-----------------------------------------------
 
