@@ -10,6 +10,7 @@ ingest.em_mara_changed 	:	will contain Items which have been in d_Item  , but at
 #--0    Update mara_snap from Item file which arrived today
 
 /* clean up stg tables */
+truncate table dw_sourcing.d_item;
 truncate table ingest.em_mara_snap;
 truncate table ingest.em_mara_new ;
 truncate table ingest.em_mara_changed ;
@@ -19,7 +20,7 @@ insert into ingest.em_mara_snap
 select
 concat('MAT',MATNR),MTART,MBRSH,MATKL,MEINS,BSTME,MAX01,MAX02,MAX03,MAX04,MAX05,MAX06,MAX07,MAX08,MAX09,MAX10,MAX11,
 MAX12,MAX13,MAX14,MAX15,MAX16,MAX17,MAX18,MAX19,MAX20,MAX21
-FROM `ingest`.`em_mara2` limit 10;
+FROM `ingest`.`em_mara2` ;
 
 #--1    Prepare dataset of for _new, (i.e, non of source_keys which are present in new available in dimension table 
 
@@ -47,7 +48,11 @@ SELECT incr(), MATNR,
     MAX11,    MAX12,    MAX13,    MAX14,    MAX15,    MAX16,    MAX17,    MAX18,
     MAX19,    MAX20,    MAX21,'2015-10-10','2999-12-31'
 FROM `ingest`.`em_mara_new`;
-#working
+#Above stem inserts duplicate surrogate keys
+
+select item_id,material_number,material_type,industry_sector
+from dw_sourcing.d_Item limit 10;
+
 
 #-- changes in source
 #--
