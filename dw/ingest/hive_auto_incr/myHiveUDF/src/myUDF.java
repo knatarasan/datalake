@@ -11,9 +11,9 @@ http://hadooptutorial.info/writing-custom-udf-in-hive-auto-increment-column-hive
  		this UDF creates only one value 11  (10+1), ie, every call to UDF will return 11 
  
  But using annotation @UDFType(deterministic = false) would work good
- 		every call to UDF will return increment 
+ 		every call to UDF will return increment    
  */
-@UDFType(deterministic = false)
+@UDFType(deterministic = false,stateful=true)
 
 public class myUDF extends UDF
 {
