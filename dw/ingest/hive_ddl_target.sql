@@ -1,0 +1,35 @@
+
+
+CREATE TABLE dw_sourcing.d_Item (
+  `item_id` int,
+  `material_number` varchar(20),
+  `material_type` varchar(50),
+  `industry_sector` varchar(50),
+  `material_group` varchar(20),
+  `base_unit_of_measure` varchar(3),
+  `order_unit` varchar(3),
+  `material_xx1` varchar(50),
+  `material_xx2` varchar(50),
+  `material_xx3` varchar(50),
+  `material_xx4` varchar(50),
+  `material_xx5` varchar(50),
+  `material_xx6` varchar(50),
+  `material_xx7` varchar(50),
+  `material_xx8` varchar(50),
+  `material_xx9` varchar(50),
+  `material_xx10` varchar(50),
+  `material_xx11` varchar(50),
+  `material_xx12` varchar(50),
+  `material_xx13` varchar(50),
+  `material_xx14` varchar(50),
+  `material_xx15` varchar(50),
+  `material_xx16` varchar(50),
+  `material_xx17` varchar(50),
+  `material_xx18` varchar(50),
+  `material_xx19` varchar(50),
+  `material_xx20` varchar(50),
+  `material_xx21` varchar(50),
+  `eff_from_date` date,
+  `eff_to_date` date
+)CLUSTERED BY(item_id) INTO 5 BUCKETS
+STORED as orc TBLPROPERTIES ('transactional'='true');
