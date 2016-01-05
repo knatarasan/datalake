@@ -23,12 +23,14 @@ LINES TERMINATED BY '\n'
 STORED AS TEXTFILE
 LOCATION '/user/inn81545/ETL/ARR';
 
-select name,ph,category[1],category[0],shape["color"],shape["type"],addr.zip,addr.state from sam_arr;
+select name,ph,category[1],category[0],shape["color"],shape["type"],addr.zip,addr.state from sam_arr
 
 
-
-Refer http://bigdatariding.blogspot.com/2014/02/hive-complex-data-types-with-examples.html
 Name1	ph1	foo1	bar1	3	1000	94583	ca
 Name2	ph1	foo2	bar2	4	2000	45632	oh
 Name3	ph1	foo3	bar3	5	3000	9381	ct
 Name4	ph2	132510045614020795201932	111810027456506994609359	6	4000	34567	az
+
+
+
+Refer http://bigdatariding.blogspot.com/2014/02/hive-complex-data-types-with-examples.html
