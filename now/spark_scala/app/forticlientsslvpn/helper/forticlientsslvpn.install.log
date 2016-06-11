@@ -1,0 +1,8 @@
+begin setup at ./helper...
+begin setup at ./helper...
+Checking if pppd is installed...OK
+Checking if iproute package is installed...OK
+Setup ./helper/subproc
+./helper/linux.rtbackup
+./helper/sysconfig.linux.sh
+./helper/cleanup.linux.sh

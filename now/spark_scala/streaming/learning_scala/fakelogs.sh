@@ -11,5 +11,12 @@ cat ./files/fake_logs/log1.log >> /tmp/logdata
 sleep 2
 cat ./files/fake_logs/log1.log >> /tmp/logdata
 sleep 3
-sleep 20
+cat ./files/fake_logs/log1.log >> /tmp/logdata
+sleep 3
+cat ./files/fake_logs/log1.log >> /tmp/logdata
+sleep 3
+cat ./files/fake_logs/log1.log >> /tmp/logdata
+sleep 3
+cat ./files/fake_logs/log1.log >> /tmp/logdata
+sleep 3
 kill $TAIL_NC_PID

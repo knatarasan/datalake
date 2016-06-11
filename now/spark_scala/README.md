@@ -18,6 +18,11 @@ $spark-submit --class com.oreilly.learningsparkexamples.scala.StreamingLogInput 
 
 The above will receive log entries and process it with the scala program language
 
+#When you get following error
+error: not found: object AssemblyKeys
+create following file under streaming/project
+$cat assembly.sbt
+addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "0.11.2")
 
 
 #APP on scala 
@@ -32,5 +37,15 @@ This is to run scala as stand alone
 	Eg: target/scala-2.10/Tutorial-assembly-0.1-SNAPSHOT.jar
 
 $spark-submit --class Page target/scala-2.10/Tutorial-assembly-0.1-SNAPSHOT.jar
+
+
+
+# Indexed RDD is explored with following data dump
+
+file:///home/kannappan/datalake/archive/spark/ampcamp6/data/indexedrdd/
+
+
+---------------------------------------------------------------------
+Above programs works fine with spark 1.5 which comes with AMP lab6 download
 
 

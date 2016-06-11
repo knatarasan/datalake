@@ -15,7 +15,7 @@ object StreamingLogInput {
     // Create a StreamingContext with a 1 second batch size
     val ssc = new StreamingContext(conf, Seconds(1))
     // Create a DStream from all the input on port 7777
-    val lines = ssc.socketTextStream("localhost", 7777)
+    val lines = ssc.socketTextStream("wn2.kara", 7777)
     val errorLines = processLines(lines)
     // Print out the lines with errors, which causes this DStream to be evaluated
     errorLines.print()
