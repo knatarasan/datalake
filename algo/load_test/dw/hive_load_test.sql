@@ -603,7 +603,6 @@ hive> explain select count(*) from
     > ) MM;
 OK
 
-1<--2<--0
 
 STAGE DEPENDENCIES:
   Stage-1 is a root stage

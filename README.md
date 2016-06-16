@@ -36,3 +36,6 @@ Hadoop file system
 
 
 
+Follow this link to get tips for Readme Markup
+
+https://github.com/tchapi/markdown-cheatsheet/blob/master/README.md

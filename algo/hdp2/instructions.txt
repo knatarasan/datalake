@@ -1,0 +1,30 @@
+Hello Kannappan, 
+
+As discussed, one of the steps that we need you to accomplish is the technical exercise.  You’ve done well with your conversations thus far and the consulting team is excited to see how you perform and deliver on this exercise.  In summary: 
+
+
+*The assignment will require you to install and provision a cluster.  
+
+*Once installed, then perform some analysis with Hive and Storm or Spark
+
+*Then present your results back to our team.  This will be either a face-to-face meet or something online like Webex. During the presentation you will be addressing the team as if they are a “Hortonworks Customer/User group”. You will have an opportunity to go through the entire presentation first. After everyone is out of the “Customer/User Group” mode you can proceed to ask additional questions.
+
+
+*This is a small, but representative sample of the work a consultant will do.  Please see the attached documentation for instructions.  The Twitter sample data (also attached) is data you will want to use for task #3, option 1.
+
+*How Long Will This Take?  — This will probably take you 7-10 days to complete.  Therefore, we would like to set the expectation that you have 1 week to work on this assignment.  The level of effort could be more based on your experience level and exposure to Hadoop.  But, it should not exceed 15-30 hours.
+
+*What if I incur costs spinning this up in the cloud? - We’ll reimburse expenses incurred for this exercise up to $100.  Please be mindful of this not to exceed that.
+m3.large (RHEL) - $0.133/hr ($97.36/mo) X 3 = $292.08 monthly total
+150 GB EBS Storage (50 GB per instance) = $7.50 monthly total
+Total Monthly Cost = $299.58
+Anticipated cost for 7-10 days:  $74 – 100.
+Hortonworks will reimburse up to $100 for the cost of this assignment
+
+
+*What Are We Evaluating? — Baseline technical skills, problem-solving skills, and presentation skills; all of which are critical to the success of a consultant during a client engagement.
+
+*Once you have completed the technical exercise. Please put a powerpoint presentation together of your solution. As you get closer to finishing, make sure to send me screen shots of your work and include any coding this is required during this exercise. I will send this to the team prior to your presentation. Please also give me a call at this time so we can work on scheduling a date for your presentation.
+
+*Questions? — Please let me know if you have any questions.  However, keep in mind that one of the things we are evaluating is your ability to solve problems on your own.  
+

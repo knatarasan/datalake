@@ -18,7 +18,7 @@ jar cf Max.jar *.class
 
 export HADOOP_CLASSPATH=Max.jar
 
-hadoop jar Max.jar MaxTemperature 
+hadoop jar Max.jar MaxTemperature /datalake/mr/data/weather.txt /datalake/mr/data/out
 
 */
 
