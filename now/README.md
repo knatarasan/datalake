@@ -25,6 +25,8 @@ now
 	org.flume.source.twitter.json.TwitterSource.java  
 		- This is compiled here and jar is placed in folder flume/lib
 		- Because default java class brings in twitter feed as avro file, the above one converts to json format
+		- Make sure following twitter source property is used, thus flume will load human readable json tweets into hdfs
+		TwitterAgent.sources.Twitter.type = org.flume.source.twitter.json.TwitterSource
 
 	3. Following step will start flume agent with conf file flum2.conf, <- run this at wn2.kara
 	
