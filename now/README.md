@@ -56,9 +56,7 @@ now
 *works*  Because current version installed  is spark 1.3.1
 *works*  Because current version installed  is spark 1.3.1
 
-	9.When tested different sink properties, the flume behaviour is whichever is minimum it takes priority
-For eg in the following if rollInterval=1, the it writes a hdfs file for every 1 second
-and suppose rollInterval=120 and rollCount is 100, it writes a hdfs file for every 100 row
+	9.When tested different sink properties, the flume behaviour is whichever is minimum it takes priority For eg in the following if rollInterval=1, the it writes a hdfs file for every 1 second and suppose rollInterval=120 and rollCount is 100, it writes a hdfs file for every 100 row
 
 
 
